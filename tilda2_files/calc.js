@@ -92,20 +92,22 @@ $(document).ready(function(){
 
 	function calc_auto () {
 		var auto_price = Number($(".js-car-price").val()),
-				auto_engine = Number($(".js-car-volume").val()),
-				auto_battery = Number($(".js-car-battery").val()),
-				auto_type = Number($('.js-calc-car option:selected').data('id')),
-				auto_engine_type = $(".js-car-fuel:checked").val(),
-				auto_age = Number($('.js-car-age').val()),
-				region = $('body').data('region'),
-				euro_course = parseFloat($(".js-car-course").val()),
-				grn_course = 	parseFloat($(".js-car-course-grn").val()),
-				lei_course = parseFloat($(".js-car-course-lei").val()),
-				rastamoj = 0,
-				expedir = 750,
-				avtopmr = 400,//Number($('.js-calc-avtopmr').val()),
-				acciz, poshlina, nds, rastamoj_add, acciz_single, total_price, comission, pension, pension_single,
-				ship1, ship2, ship_days, ship_port;
+			auto_engine = Number($(".js-car-volume").val()),
+			auto_battery = Number($(".js-car-battery").val()),
+			auto_type = Number($('.js-calc-car option:selected').data('id')),
+			auto_engine_type = $(".js-car-fuel:checked").val(),
+			auto_age = Number($('.js-car-age').val()),
+			region = $('body').data('region'),
+			euro_course = parseFloat($(".js-car-course").val()),
+			grn_course = 	parseFloat($(".js-car-course-grn").val()),
+			lei_course = parseFloat($(".js-car-course-lei").val()),
+			rastamoj = 0,
+			insur = auto_price * 0.02,
+			park = 50,
+			expedir = 750,
+			avtopmr = 400,//Number($('.js-calc-avtopmr').val()),
+			acciz, poshlina, nds, rastamoj_add, acciz_single, total_price, comission, pension, pension_single,
+			ship1, ship2, ship_days, ship_port;
 		
 		ship1 = parseInt($(".js-calc-city").val()) * ((auto_type == 3) ? .8 : 1);
 		ship2 = parseInt($(".js-calc-city option:selected").attr("data-sea")) * ((auto_type == 3) ? .5 : 1);
@@ -241,7 +243,7 @@ $(document).ready(function(){
 		
 		
 
-		total_price = parseInt(auto_price) + parseInt(acciz) + parseInt(poshlina) + parseInt(nds) + parseInt(region == 'ua' ? 0 : rastamoj) + ship1 + ship2 + parseInt(comission) + avtopmr + expedir;
+		total_price = parseInt(auto_price) + parseInt(acciz) + parseInt(poshlina) + parseInt(nds) + parseInt(region == 'ua' ? 0 : rastamoj) + ship1 + ship2 + parseInt(comission) + avtopmr + expedir + insur + park;
 		
 		$(".js-result-price").text(auto_price);
 		$("input[name='car_bid']").val(auto_price);
@@ -291,6 +293,11 @@ $(document).ready(function(){
 		$(".js-result-ship_port").text(ship_port);
 		$("input[name='car_port']").val(ship_port);
 
+		$(".js-result-insur").text(insur);
+		$("input[name='car_insur']").val(insur);
+
+		$(".js-result-park").text(park);
+		$("input[name='car_park']").val(park);
 
 		$(".js-result-comission").text(comission);
 		$("input[name='car_auction']").val(comission);
