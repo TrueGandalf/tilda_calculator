@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900&display=swap');
+
+
+/* promo */
+
+.promo .main-poster {
+  padding: 50px 0;
+  background: url(images/main-poster-promo.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.promo .main-poster-title,
+.promo .main-poster-desc {
+  font-size: 1.7em;
+  font-weight: 300;
+  color: #fff;
+  margin: 15px 0;
+}
+.promo .main-poster-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.7em;
+}
+.promo .main-poster-form {
+  margin: auto;
+  padding: 25px 10px;
+  background-color: rgba(255,255,255,.67);
+  font-size: 1.2em;
+  width: 260px;
+}
+.promo .main-poster-form_gray {
+  background-color: #eee;
+}
+.promo .main-poster-form .form-row {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.promo .main-poster-form .txt {
+  border-color: #08478a;
+}
+
+
+/* promo 2 */
+
+.promo2 .maintitle {
+  color: #636363;
+}
+.promo2 .maintitle:before {
+  background-color: #636363;
+}
+.promo2 .btn2 {
+  color: #000;
+  border-color: #000;
+}
+
+/* header */
+
+.promo2 .header {
+  color: #fff;
+  border-bottom: 1px solid #a70a1f;
+}
+.promo2 .header-logo {
+  background-image: url(images/promo/header-logo.svg);
+}
+.promo2 .header a,
+.promo2 .header-city-label {
+  color: #fff;
+}
+.promo2 .header-city-select_list li {
+  color: #000;
+}
+.promo2 .header-phone {
+  background: none;
+  padding-left: 0;
+}
+
+/* menu */
+
+.promo2 .header,
+.promo2 .menumain,
+.promo2 .menumain .wrap {
+  background-color: #323232;
+}
+.promo2 .menumain {
+  padding: 20px 0;
+}
+
+/* main poster */
+
+.promo2 .main-poster {
+  padding: 50px 0 250px;
+  background: url(images/promo/main-poster.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  margin-bottom: 120px;
+  position: relative;
+}
+.promo2 .main-poster-title,
+.promo2 .main-poster-desc {
+  font-size: 1.7em;
+  margin: 15px 0;
+  text-align: right;
+}
+.promo2 .main-poster-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3.7em;
+}
+.promo2 .main-poster-title span {
+  color: #FE0302;
+}
+.promo2 .main-poster-desc b {
+  font-size: 1.2em;
+}
+.promo2 .main-poster-form {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 40px;
+  background-color: #1F1F1E;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+}
+.promo2 .main-poster-form_float {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+}
+.promo2 .main-poster-form .txt {
+  border-color: #08478a;
+  padding: 13px;
+}
+
+
+.why-block {
+  padding: 50px 0 25px;
+  background: #e4eaf3 url(images/promo/why-bg.jpg) no-repeat center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  font-size: 1.3em;
+}
+.why-block .maintitle {
+  margin-bottom: 50px;
+}
+.why-block-item {
+  position: relative;
+  padding: 30px 20px 30px 50px;
+}
+.why-block .col-4,
+.steps-block .col-4 {
+  counter-increment: step-counter;
+  display: flex;
+}
+.why-block-item:before,
+.promo .steps-block-item:before {
+  display: block;
+  width: 48px;
+  height: 48px;
+  content: counter(step-counter);
+  margin: 0 auto 25px;
+  color: #fff;
+  border-radius: 9999px;
+  background-color: #be0707;
+  font-weight: bold;
+  text-align: center;
+  line-height: 48px;
+}
+.why-block-item:before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.steps-block {
+  background: url(images/promo/prev-bg.jpg) no-repeat -200px 100px;
+  -webkit-background-size: auto calc(100% - 100px);
+  background-size: auto calc(100% - 100px);
+  font-size: 1.3em;
+}
+.steps-block-item {
+  text-align: center;
+  padding: 40px 25px;
+  background: rgba(255,255,255,.93);
+  color: #545454;
+  box-shadow: 0 3px 10px rgba(0,0,0,.15);
+  line-height: 1.6;
+  position: relative;
+}
+.promo2 .steps-block-item:before {
+  display: block;
+  content: "0" counter(step-counter);
+  position: absolute;
+  color: rgba(0,0,0,.15);
+  font: 900 8rem 'Lato', sans-serif;
+  top: 30px;
+  left: 30px;
+}
+.promo2 .steps-block-text {
+  position: relative;
+  z-index: 100;
+}
+
+.prevs-block_promo:after {
+  content: '';
+  width: 45%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  background: url(images/promo/prev-bg.jpg) no-repeat left center;
+  background-size: auto 100%;
+}
+
+.promo2 .btn3,
+.promo2 .ui-slider-range {
+  background-color: #292929;
+}
+.promo2 .owl-dots .active,
+.promo2 .ui-slider-handle,
+.promo2 .soc-block-item,
+.promo2 .carfax-fastsearch-btn {
+  background-color: #BD0808;
+}
+
+.promo2 .m-phone-btn {
+  border-color: #fff;
+}
+.promo2 .ico-phone-blue {
+  background-image: url(images/phone-ico-white.svg);
+}
+
+.promo2  .footer-scrolltop {
+  background-color: #000;
+}
+.promo2 .footer-wrap {
+  background: #292929;
+}
+
+@media screen and (max-width: 850px) {
+  .promo2 .main-poster {
+    padding: 10px 0 380px;
+  }
+}

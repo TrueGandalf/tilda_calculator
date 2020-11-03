@@ -1,0 +1,355 @@
+.lg-show,
+.bg-show,
+.sm-show,
+.xs-show {
+	display: none;
+}
+
+.m-menu-toggle {
+	width: 32px;
+	padding: 0 10px;
+}
+.m-menu-toggle span {
+	height: 2px;
+	display:  block;
+	margin-bottom: 8px;
+	background: #fff;
+}
+.m-menu-toggle span:last-child {
+	margin-bottom: 0;
+}
+.m-phone-btn {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #0C4789;
+	display: block;
+	text-align: center;
+	line-height: 38px;
+}
+.m-phone-btn .ico {
+	margin: 0;
+}
+
+@media screen and (max-width: 1300px) {
+	.carousel-navs .owl-nav .owl-next {
+		right: 0;
+		box-shadow: 0 0 10px rgba(0,0,0,.1)
+	}
+	.carousel-navs .owl-nav .owl-prev {
+		left: 0;
+		box-shadow: 0 0 10px rgba(0,0,0,.1)
+	}
+}
+
+@media screen and (max-width: 64em) {
+	.col-bg {
+		width: auto;
+	}
+	.col-bg-1 {
+		width: 8.333%;
+	}
+	.col-bg-2 {
+		width: 16.666%;
+	}
+	.col-bg-24 {
+		width: 20%;
+	}
+	.col-bg-25 {
+		width: 20.832%;
+	}
+	.col-bg-3 {
+		width: 25%;
+	}
+	.col-bg-4 {
+		width: 33.333%;
+	}
+	.col-bg-5 {
+		width: 41.666%;
+	}
+	.col-bg-6 {
+		width: 50%;
+	}
+	.col-bg-7 {
+		width: 58.333%;
+	}
+	.col-bg-8 {
+		width: 66.666%;
+	}
+	.col-bg-9 {
+		width: 74.999%;
+	}
+	.col-bg-75 {
+		width: 79.168%;
+	}
+	.col-bg-12 {
+		width: 100%;
+	}
+	
+	.mainmenu li {
+		padding-left: 2.7%;
+		margin-right: 1.5%;
+	}
+	.prevs-block:before {
+		width: 100%;
+	}
+
+	.bg-show {
+    display: block;
+  }	
+	.bg-hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+	.col-sm-2 {
+		width: 16.666%;
+	}
+	.col-sm-3 {
+		width: 25%
+	}
+	.col-sm-4 {
+		width: 33%;
+	}
+	.col-sm-6 {
+		width: 50%;
+	}
+	.col-sm-7 {
+		width: 58.333%;
+	}
+	.col-sm-8 {
+		width: 66.666%;
+	}
+	.col-sm-12 {
+		width: 100%;
+	}
+	.mb {
+		margin-bottom: 15px;
+	}
+	.mb-big {
+		margin-bottom: 25px;
+	}
+	.maintitle, h1 {
+		font-size: 3rem;
+	}
+	h2 {
+		font-size: 2.3rem
+	}
+	h3, h4, h5, h6 {
+		font-size: 1.8rem
+	}
+	
+	.header {
+		padding: 8px 0 12px;
+	}
+	.header-logo {
+		height: 60px
+	}
+	.header-city-label {
+		margin-bottom: 4px;
+	}
+	.mainmenu {
+		position: absolute;
+		top: calc(100% + 10px);
+		left: -1%;
+		right: -1%;
+		background-color: #0D437E;
+		z-index: 100;
+	}
+	.mainmenu li,
+	.mainmenu li:first-child,
+	.mainmenu li:last-child {
+		display: block;
+		background: none;
+		padding: 0;
+		margin: 0;
+	}
+	.mainmenu a {
+		padding: 15px;
+		border-top: 1px solid rgba(0,0,0,.2);
+	}
+	.mainmenu a:hover {
+		background-color: #0C4789;
+	}
+	.main-slider-item {
+		min-height: 300px;
+		padding: 20px 0;
+		font-size: 1.2rem;
+	}
+	.main-slider-content {
+		width: 80%;
+	}
+	.main-slider-item_title {
+		margin-bottom: 10px;
+	}
+
+	.delivery-steps-item_2:after,
+	.delivery-steps-item_4:after {
+    transform: rotate(90deg);
+    right: auto;
+    left: 10%;
+    top: 110%;
+	}
+	.delivery-steps-item_3 { order: 4; }
+	.delivery-steps-item_3:after {
+    transform: rotate(180deg);
+    top: 20%;
+    left: -20%;
+	}
+	.delivery-steps-item_4 { 
+		margin-bottom: 70px;
+		order: 3; 
+	}
+
+	.delivery-steps-item_5 { order: 5; }
+	.delivery-steps-item_5:after {
+		left: auto;
+		right: 0;
+		transform: none;
+	}
+	.delivery-steps-item_6 { order: 6; }
+
+	.sm-show {
+    display: block;
+  }	
+	.sm-hidden,
+	.prevs-block:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 35em) {
+	.col-xs-1 {
+		width: 8.333%;
+	}
+	.col-xs-2 {
+		width: 16.666%;
+	}
+	.col-xs-24 {
+		width: 20%;
+	}
+	.col-xs-25 {
+		width: 20.832%;
+	}
+	.col-xs-3 {
+		width: 25%;
+	}
+	.col-xs-4 {
+		width: 33.333%;
+	}
+	.col-xs-5 {
+		width: 41.666%;
+	}
+	.col-xs-6 {
+		width: 50%;
+	}
+	.col-xs-7 {
+		width: 58.333%;
+	}
+	.col-xs-8 {
+		width: 66.666%;
+	}
+	.col-xs-9 {
+		width: 74.999%;
+	}
+	.col-xs-75 {
+		width: 79.168%;
+	}
+	.col-xs-12 {
+		width: 100%;
+		float: none;
+	}
+	
+	.header-city {
+		font-size: 1.15em;
+	}
+
+	.popup {
+		width: auto;
+		left: 2%;
+		right: 2%;
+		margin: 0;
+	}
+	.popup-content {
+		padding: 15px 6%;
+	}
+	.main-slider-item {
+		min-height: none;
+		padding: 15px;
+		font-size: .9rem;
+	}
+	.main-slider .owl-nav {
+		text-align: right;
+	}
+	.main-slider-item_title,
+	.main-slider-item_subtitle {
+		line-height: 1.3;
+		margin-bottom: 10px;
+	}
+
+	.car-chars td,
+	.car-options {
+		padding: 5px;
+	}
+	.calc-section_table_row {
+		padding: 0 5px;
+	}
+	.calc-section_form {
+		padding: 15px;
+		border-right: 1px solid #dadcdd;
+	}
+	.carousel-wrap,
+	.why-block {
+		padding: 15px 0;
+	}
+	.main-poster {
+		padding:  15px 0 0;
+		margin-bottom: 20px;
+	}
+	.main-poster-title {
+  	font-size: 2em;
+  }
+	.main-poster-desc {
+		font-size: 1.5em;
+	}
+	.main-poster-form {
+		position: static;
+	}
+	.maintitle, h1,
+	.why-block .maintitle {
+		font-size: 2.4rem;
+		margin-bottom: 15px;
+	}
+	.tabs-header .tab {
+		margin-left: 0;
+		display: block;
+	}
+	
+	.form-label_inline {
+		font-size: 1.3rem;
+		color: #888;
+	}
+	.carfax-form-wrap {
+		font-size: 1.7em;
+	}
+	.carfax-pay-info {
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	.why-block-item {
+		padding: 30px 0 0 60px;
+	}
+
+	.xs-text-center {
+		text-align: center;
+	}
+	.xs-text-left {
+		text-align: left;
+	}
+	.xs-show {
+    display: block;
+  }	
+	.xs-hidden {
+    display: none;
+  }
+}
