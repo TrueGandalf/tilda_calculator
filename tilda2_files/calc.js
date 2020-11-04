@@ -73,6 +73,10 @@ acciz_limits = {
 }
 
 $(document).ready(function(){
+	for (let value of $(".js-calc-city option")) {
+		if (value.getAttribute("data-target") != "cop") value.hidden = true;
+	}
+	$(".js-calc-city option")[0].selected = true;
 	$(".js-calc-push").click(function(e){
 		e.preventDefault();
 		calc_auto();
@@ -80,7 +84,37 @@ $(document).ready(function(){
 	$('.js-calc-car').change(function(){
 		$('.js-calc-car-image').attr('src',$('option:selected',this).data('img'));
 	});
-	$(".js-car-auction, .js-calc-city, .js-calc-avtopmr").change(function(e){
+	$(".js-calc-city, .js-calc-avtopmr").change(function(e){
+		calc_auto();
+	});
+	$(".js-car-auction").change(function(e){
+		let obj = $(".js-calc-city option");
+		switch (e.target.value) {
+			case "copart":
+				for (let value of obj) {
+					if (value.getAttribute("data-target") != "cop") value.hidden = true
+					else value.hidden = false;
+				}
+				break;
+			case "iaai":
+				for (let value of obj) {
+					if (value.getAttribute("data-target") != "iaa") value.hidden = true
+					else value.hidden = false;
+				}
+				break;
+			case "heim":
+				for (let value of obj) {
+					if (value.getAttribute("data-target") != "man") value.hidden = true
+					else value.hidden = false;
+				}
+				break;
+		}
+		for (let value of obj) {
+			if (!value.hidden) {
+				value.selected = true;
+				break;
+			}
+		}
 		calc_auto();
 	});
 	$('.js-car-fuel').change(function(){
@@ -109,10 +143,14 @@ $(document).ready(function(){
 			acciz, poshlina, nds, rastamoj_add, acciz_single, total_price, comission, pension, pension_single,
 			ship1, ship2, ship_days, ship_port;
 		
+		//ship1 = parseInt($(".js-calc-city").val()) * ((auto_type == 3) ? .8 : 1);
+		//ship2 = parseInt($(".js-calc-city option:selected").attr("data-sea")) * ((auto_type == 3) ? .5 : 1);
+		//ship_days = $(".js-calc-city option:selected").attr("data-days");
+		//ship_port = $(".js-calc-city option:selected").attr("data-port");
 		ship1 = parseInt($(".js-calc-city").val()) * ((auto_type == 3) ? .8 : 1);
-		ship2 = parseInt($(".js-calc-city option:selected").attr("data-sea")) * ((auto_type == 3) ? .5 : 1);
-		ship_days = $(".js-calc-city option:selected").attr("data-days");
-		ship_port = $(".js-calc-city option:selected").attr("data-port");
+		ship2 = parseInt($(".js-calc-city option:selected")[0].attributes[1].nodeValue) * ((auto_type == 3) ? .5 : 1);
+		ship_days = +$(".js-calc-city option:selected")[0].attributes[2].nodeValue;
+		ship_port = $(".js-calc-city option:selected")[0].attributes[0].nodeValue;
 
 		function calc_acziz_bens(price, capacity, koef){
 			var tarif, akciz;
