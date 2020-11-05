@@ -174,18 +174,18 @@ $(document).ready(function(){
 
 		fares.forEach(function(element) {
 			var fares1 = element.split(":");
-			var fares_from = parseInt(fares1[0]);
-			var fares_to = parseInt(fares1[1]);
+			var fares_from = +fares1[0];
+			var fares_to = +fares1[1];
 			
 			if (auto_price >= fares_from && auto_price < fares_to) {
 				comission = parseInt(fares1[2]);
 
-				if (auto_price >= 15000 && $(".js-car-auction").val() == 'copart') 
+				if (auto_price >= 15000 && $(".js-car-auction").val() != 'heim') 
 					comission = Number(auto_price)*0.04 + Number(fares1[2]);
 
-				if (auto_price >= 7500 && $(".js-car-auction").val() == 'iaai') {
+				/*if (auto_price >= 7500 && $(".js-car-auction").val() == 'iaai') {
 					comission = comission +  Number(auto_price) * ((auto_price < 20000) ? 0.01 : 0.04) + 35;
-				}
+				}*/
 			}
 			
 		});
