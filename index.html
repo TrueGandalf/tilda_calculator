@@ -1,708 +1,1036 @@
-<!DOCTYPE html>
-<html lang="ru">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0">
-		<meta name="description" content="Полная стоимость доставки авто из США. Калькулятор просчета стоимости доставки. Авто из США под ключ. Полное сопровождение и страховка груза. Оформление и сертификация авто из Америки.">
-		<link rel="shortcut icon" href="https://usa.avtopmr.com/favicon.ico">
-		<meta name="verification" content="65a4da9f6105201f4e4f6c85ba483a">	
-		<link rel="apple-touch-icon" sizes="180x180" href="https://usa.avtopmr.com/templates/images/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="https://usa.avtopmr.com/templates/images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="https://usa.avtopmr.com/templates/images/favicon/favicon-16x16.png">
-		<link rel="manifest" href="https://usa.avtopmr.com/templates/images/favicon/site.webmanifest">
-		<link rel="mask-icon" href="https://usa.avtopmr.com/templates/images/favicon/safari-pinned-tab.svg" color="#0253a4">
-		<link rel="shortcut icon" href="https://usa.avtopmr.com/templates/images/favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#2d89ef">
-		<meta name="msapplication-config" content="https://usa.avtopmr.com/templates/images/favicon/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+<!-- <link rel="stylesheet" href="https://usa.avtopmr.com/templates/jquery.fancybox.css?1554143451" media="screen">
+	<zlink rel="stylesheet" href="https://usa.avtopmr.com/templates/owl.carousel.min.css?1562600663" media="screen"> -->
+		<link rel="stylesheet" href="https://usa.avtopmr.com/templates/style.css?1602863917" media="all">
+	<!-- <link rel="stylesheet" href="https://usa.avtopmr.com/templates/promo.css?1566215906" media="all">
+	<link rel="stylesheet" href="https://usa.avtopmr.com/templates/respond.css?1562684904" media="screen"> -->
 
-		<link href="./tilda2_files/css" rel="stylesheet">
-		<link rel="stylesheet" href="./tilda2_files/jquery.fancybox.css" media="screen">
-		<link rel="stylesheet" href="./tilda2_files/owl.carousel.min.css" media="screen">
-		<link rel="stylesheet" href="./tilda2_files/style.css" media="all">
-		<link rel="stylesheet" href="./tilda2_files/promo.css" media="all">
-		<link rel="stylesheet" href="./tilda2_files/respond.css" media="screen">
-
-		<!--[if lt IE 9]>
-		<script src="https://usa.avtopmr.com/js/html5.js"></script>
-		<![endif]-->
-	</head>
-	<body class="mainpage" data-region="ua">
-		<header class="header">
-			<div class="wrap mb-big">
-				<div class="maintitle">Расчет стоимости</div>
-				<form class="calc js-calc-form" action="file:///D:/print/" target="_blank" method="post">
-					<input type="hidden" name="course" value="1.1704" class="js-car-course">
-					<input type="hidden" name="course_grn" value="25.14" class="js-car-course-grn">
-					<input type="hidden" name="course_lei" value="0.059" class="js-car-course-lei">
-					<input type="hidden" name="car_bid" value="">
-					<input type="hidden" name="car_auction" value="">
-					<input type="hidden" name="car_delivery" value="">
-					<input type="hidden" name="car_delivery2" value="">
-					<input type="hidden" name="car_acciz" value="">
-					<input type="hidden" name="car_acciz_single" value="">
-					<input type="hidden" name="car_poshlina" value="">
-					<input type="hidden" name="car_poshlina_per" value="">
-					<input type="hidden" name="car_nds" value="">
-					<input type="hidden" name="car_nds_per" value="">
-					<input type="hidden" name="car_pf" value="">
-					<input type="hidden" name="car_pf_single" value="">
-					<input type="hidden" name="car_avtopmr" value="">
-					<input type="hidden" name="car_avtopmr_type" value="">
-					<input type="hidden" name="car_exp" value="">
-					<input type="hidden" name="car_rastamojka_per" value="">
-					<input type="hidden" name="car_rastamojka" value="">
-					<input type="hidden" name="car_total" value="">
-					<input type="hidden" name="car_insur" value="">
-					<input type="hidden" name="car_park" value="">
-					<div class="row">
-						<div class="col-5 col-sm-12 calc-section calc-section_form">
-							<div class="form-row">
-								<div class="form-label form-label_fixed"><img src="file:///D:/uploads/car1.svg" class="js-calc-car-image" alt=""></div>
-								<select name="car" class="txt txt100 txt-big js-calc-car">
-									<option data-id="1" value="Легковой автомобиль" data-img="/uploads/car1.svg" selected="">Легковой автомобиль</option>
-									<option data-id="2" value="Грузовой автомобиль" data-img="/uploads/car2.svg">Грузовой автомобиль</option>
-									<option data-id="3" value="Мотоцикл" data-img="/uploads/car3.svg?3">Мотоцикл</option>
-								</select>
-							</div>
-							<div class="form-row">
-								<div class="form-label form-label_fixed">Цена авто</div>
-								<input type="number" name="price" value="10000" class="txt txt-big js-car-price" step="100" min="500">
-							</div>
-							<div class="form-row">
-								<div class="form-label form-label_fixed">Объем двиг.</div>
-								<select name="volume" class="txt txt-big js-car-volume">
-									<option value="0.1">0.1</option>
-									<option value="0.2">0.2</option>
-									<option value="0.3">0.3</option>
-									<option value="0.4">0.4</option>
-									<option value="0.5">0.5</option>
-									<option value="0.6">0.6</option>
-									<option value="0.7">0.7</option>
-									<option value="0.8">0.8</option>
-									<option value="0.9">0.9</option>
-									<option value="1.0">1.0</option>
-									<option value="1.1">1.1</option>
-									<option value="1.2">1.2</option>
-									<option value="1.3">1.3</option>
-									<option value="1.4">1.4</option>
-									<option value="1.5">1.5</option>
-									<option value="1.6" selected="selected">1.6</option>
-									<option value="1.7">1.7</option>
-									<option value="1.8">1.8</option>
-									<option value="1.9">1.9</option>
-									<option value="2.0">2.0</option>
-									<option value="2.1">2.1</option>
-									<option value="2.2">2.2</option>
-									<option value="2.3">2.3</option>
-									<option value="2.4">2.4</option>
-									<option value="2.5">2.5</option>
-									<option value="2.6">2.6</option>
-									<option value="2.7">2.7</option>
-									<option value="2.8">2.8</option>
-									<option value="2.9">2.9</option>
-									<option value="3.0">3.0</option>
-									<option value="3.1">3.1</option>
-									<option value="3.2">3.2</option>
-									<option value="3.3">3.3</option>
-									<option value="3.4">3.4</option>
-									<option value="3.5">3.5</option>
-									<option value="3.6">3.6</option>
-									<option value="3.7">3.7</option>
-									<option value="3.8">3.8</option>
-									<option value="3.9">3.9</option>
-									<option value="4.0">4.0</option>
-									<option value="4.1">4.1</option>
-									<option value="4.2">4.2</option>
-									<option value="4.3">4.3</option>
-									<option value="4.4">4.4</option>
-									<option value="4.5">4.5</option>
-									<option value="4.6">4.6</option>
-									<option value="4.7">4.7</option>
-									<option value="4.8">4.8</option>
-									<option value="4.9">4.9</option>
-									<option value="5.0">5.0</option>
-									<option value="5.1">5.1</option>
-									<option value="5.2">5.2</option>
-									<option value="5.3">5.3</option>
-									<option value="5.4">5.4</option>
-									<option value="5.5">5.5</option>
-									<option value="5.6">5.6</option>
-									<option value="5.7">5.7</option>
-									<option value="5.8">5.8</option>
-									<option value="5.9">5.9</option>
-									<option value="6.0">6.0</option>
-									<option value="6.1">6.1</option>
-									<option value="6.2">6.2</option>
-									<option value="6.3">6.3</option>
-									<option value="6.4">6.4</option>
-								</select>
-							</div>
-							<div class="form-row">
-								<label class="rb form-label_inline"><input value="Бензин" class="js-car-fuel" type="radio" name="fuel" checked=""><span class="rb-visual"></span> Бензин</label>
-								<label class="rb form-label_inline"><input value="Дизель" class="js-car-fuel" type="radio" name="fuel"><span class="rb-visual"></span> Дизель</label>
-								<label class="rb form-label_inline"><input value="Гибрид" class="js-car-fuel" data-toggle-calc="#calc-gibrid-info" type="radio" name="fuel"><span class="rb-visual"></span> Гибрид</label>
-								<label class="rb form-label_inline"><input value="Электро" class="js-car-fuel" data-toggle-calc="#calc-electro-info" type="radio" name="fuel"><span class="rb-visual"></span> Электро</label>
-							</div>
-							<div class="form-row form-meta hidden data-toggle-calc" id="calc-gibrid-info">
-								<i class="ico ico-info-dark"></i> На данный момент только BMW I3 растамаживается по ставкам гибридных автомобилей. Остальные - как бензиновые.
-							</div>
-							<div class="form-row hidden data-toggle-calc" id="calc-electro-info">
-								<div class="form-label form-label_fixed">Батарея, кВт⋅ч</div>
-								<input type="number" name="battery" value="85" class="txt txt-big js-car-battery" step="1" min="10">
-							</div>
-							<div class="form-row">
-								<div class="form-label form-label_fixed">Год выпуска</div>
-								<select name="age" class="txt txt-big js-car-age">
-									<option value="1" selected="">2020</option>
-									<option value="1">2019</option>
-									<option value="1">2018</option>
-									<option value="2">2017</option>
-									<option value="3">2016</option>
-									<option value="4">2015</option>
-									<option value="5">2014</option>
-									<option value="6">2013</option>
-									<option value="7">2012</option>
-									<option value="8">2011</option>
-									<option value="9">2010</option>
-									<option value="10">2009</option>
-									<option value="11">2008</option>
-									<option value="12">2007</option>
-									<option value="13">2006</option>
-									<option value="14">2005</option>
-									<option value="15">2004 и старше</option>
-								</select>
-								<input type="hidden" name="car_age" value="">
-							</div>
-							<div>
-								<input type="button" value="Рассчитать" class="btn btn-mid js-calc-push">
-							</div>
-						</div>
-						<div class="col-7 col-sm-12 calc-section calc-section_table">
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-9">Стоимость авто</div>
-									<div class="col text-right"><b><span class="js-result-price">0</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-5">Комиссия аукциона</div>
-									<div class="col-4">
-										<select class="txt js-car-auction" name="auction">
-											<option selected="" value="copart" data-fares="0.01:49.99:60|50.00:99.99:60|100.00:199.99:123|200.00:299.99:148|300.00:349.99:173|350.00:399.99:173|400.00:449.99:208|450.00:499.99:208|500.00:549.99:233|550.00:599.99:238|600.00:699.99:248|700.00:799.99:263|800.00:899.99:278|900.00:999.99:293|1000.00:1199.99:328|1200.00:1299.99:353|1300.00:1399.99:368|1400.00:1499.99:378|1500.00:1599.99:398|1600.00:1699.99:415|1700.00:1799.99:423|1800.00:1999.99:438|2000.00:2399.99:473|2400.00:2499.99:483|2500.00:2999.99:498|3000.00:3499.99:548|3500.00:3999.99:598|4000.00:4499.99:633|4500.00:4999.99:658|5000.00:5999.99:683|6000.00:7499.99:728|7500.00:9999.99:763|10000.00:14999.99:788|15000:10000000:188">Copart</option>
-											<option value="iaai" data-fares="0.01:49.99:60|50.00:99.99:60|100.00:199.99:123|200.00:299.99:148|300.00:349.99:173|350.00:399.99:173|400.00:449.99:208|450.00:499.99:208|500.00:549.99:233|550.00:599.99:238|600.00:699.99:248|700.00:799.99:263|800.00:899.99:278|900.00:999.99:293|1000.00:1199.99:328|1200.00:1299.99:353|1300.00:1399.99:368|1400.00:1499.99:378|1500.00:1599.99:398|1600.00:1699.99:415|1700.00:1799.99:423|1800.00:1999.99:438|2000.00:2399.99:473|2400.00:2499.99:483|2500.00:2999.99:498|3000.00:3499.99:548|3500.00:3999.99:598|4000.00:4499.99:633|4500.00:4999.99:658|5000.00:5999.99:683|6000.00:7499.99:728|7500.00:9999.99:763|10000.00:14999.99:788|15000:10000000:188">IAAI</option>
-											<option value="heim" data-fares="0:999999:450">Manheim</option>
-										</select>
-									</div>
-									<div class="col text-right"><b><span class="js-result-comission">0</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-5">Доставка по США</div>
-									<div class="col-5">
-										<select class="txt js-calc-city" name="city">
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='350'> Abilene, TX ➔ ABILENE, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> Albany, NY ➔ ALBANY, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='525'> Albuquerque, NM ➔ ALBUQUERQUE, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Altoona, PA ➔ EBENSBURG, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='400'> Amarillo, TX ➔ AMARILLO, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='2100'> Anchorage, AK ➔ ANCHORAGE, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='425'> Andrews, TX ➔ ANDREWS, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='325'> Antelope, CA ➔ ANTELOPE, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Appleton, WI ➔ APPLETON, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Atlanta East, GA ➔ LOGANVILLE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Atlanta North, GA ➔ GAINESVILLE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Atlanta South, GA ➔ ELLENWOOD, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Atlanta West, GA ➔ AUSTELL, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> Austin, TX ➔ NEW BRAUNFELS, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='275'> Bakersfield, CA ➔ BAKERSFIELD, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> Baltimore, MD ➔ FINKSBURG, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Baton Rouge, LA ➔ GREENWELL SPRINGS, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='950'> Billings, MT ➔ BILLINGS, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='325'> Birmingham, AL ➔ HUEYTOWN, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='600'> Boise, ID ➔ NAMPA, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Buffalo, NY ➔ ANGOLA, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='350'> Candia, NH ➔ CANDIA, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Cartersville, GA ➔ CARTERSVILLE, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='850'> Casper, WY ➔ CASPER, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='325'> Chambersburg, PA ➔ CHAMBERSBURG, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Charleston, WV ➔ HURRICANE, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='525'> Chicago North, IL ➔ ELGIN, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Chicago South, IL ➔ CHICAGO HEIGHTS, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='275'> China Grove, NC ➔ CHINA GROVE, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Cleveland East, OH ➔ NORTHFIELD, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Cleveland West, OH ➔ COLUMBIA STATION, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='700'> Colorado Springs, CO ➔ COLORADO SPRINGS, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='650'> Columbia, MO ➔ COLUMBIA, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='200'> Columbia, SC ➔ COLUMBIA, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Columbus, OH ➔ COLUMBUS, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='275'> Corpus Christi, TX ➔ CORPUS CHRISTI, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='200'> CrashedToys Atlanta, GA ➔ EAST POINT, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> CrashedToys Dallas, TX ➔ DALLAS, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> CrashedToys Minneapolis, MN ➔ CENTRAL AVE NE BLAINE, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='350'> Crashedtoys Sacramento, CA ➔ SACRAMENTO, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> Dallas, TX ➔ DALLAS, TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> Dallas South, TX ➔ WILMER, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Danville, VA ➔ CHATHAM, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Davenport, IA ➔ ELDRIDGE, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='450'> Dayton, OH ➔ MORAINE, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='575'> Denver, CO ➔ BRIGHTON, TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='550'> Denver Central, CO ➔ DENVER, TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='550'> Denver South, CO ➔ LITTLETON, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Des Moines, IA ➔ DES MOINES, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='450'> Detroit, MI ➔ WOODHAVEN, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='425'> El Paso, TX ➔ ANTHONY, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Eugene, OR ➔ EUGENE, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Exeter, RI ➔ EXETER, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='425'> Fayetteville, AR ➔ PRAIRIE GROVE, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Flint, MI ➔ DAVISON, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='525'> Fort Wayne, IN ➔ HARTFORD CITY, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Fredericksburg, VA ➔ FREDERICKSBURG, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='275'> Fresno, CA ➔ FRESNO, CA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='175'> Ft. Pierce, FL ➔ FORT PIERCE, FL</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> Ft. Worth, TX ➔ HASLET, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='200'> Glassboro East, NJ ➔ GLASSBORO, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Graham, WA ➔ GRAHAM, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='475'> Hammond, IN ➔ HAMMOND, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='350'> Hampton, VA ➔ HAMPTON, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Harrisburg, PA ➔ GRANTVILLE, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Hartford, CT ➔ NEW BRITAIN, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Hartford Springfield, CT ➔ EAST GRANBY, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Hayward, CA ➔ HAYWARD, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='900'> Helena, MT ➔ HELENA, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='1700'> Honolulu, HI ➔ KAPOLEI, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='200'> Houston, TX ➔ HOUSTON, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Indianapolis, IN ➔ INDIANAPOLIS, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='450'> Ionia, MI ➔ PORTLAND, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Jackson, MS ➔ FLORENCE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='175'> Jacksonville East, FL ➔ JACKSONVILLE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='175'> Jacksonville West, FL ➔ JACKSONVILLE, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Kansas City, KS ➔ KANSAS CITY, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='825'> Kincheloe, MI ➔ KINCHELOE, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Knoxville, TN ➔ MADISONVILLE, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Lansing, MI ➔ LANSING, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='300'> Las Vegas, NV ➔ LAS VEGAS, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='475'> Lexington East, KY ➔ LEXINGTON, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='475'> Lexington West, KY ➔ LAWRENCEBURG, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='650'> Lincoln, NE ➔ GREENWOOD, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='450'> Little Rock, AR ➔ CONWAY, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='175'> Long Beach, CA ➔ WILMINGTON, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='225'> Long Island, NY ➔ BROOKHAVEN, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> Longview, TX ➔ LONGVIEW, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='125'> Los Angeles, CA ➔ LOS ANGELES, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='450'> Louisville, KY ➔ LOUISVILLE, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> Lufkin, TX ➔ LUFKIN, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='275'> Lumberton, NC ➔ Lumberton, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Lyman, ME ➔ LYMAN, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Macon, GA ➔ BYRON, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Madison, WI ➔ MADISONVILLE, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Martinez, CA ➔ MARTINEZ, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='300'> McAllen, TX ➔ MERCEDES, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Mebane, NC ➔ MEBANE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='375'> Memphis, TN ➔ MEMPHIS, GA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='100'> Miami Central, FL ➔ MIAMI, FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='100'> Miami North, FL ➔ MIAMI, FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='100'> Miami South, FL ➔ HOMESTEAD, FL</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='550'> Milwaukee, WI ➔ CUDAHY, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Minneapolis, MN ➔ BLAINE, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Minneapolis North, MN ➔ HAM LAKE, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='325'> Mobile, AL ➔ EIGHT MILE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Mocksville, NC ➔ MOCKSVILLE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Montgomery, AL ➔ MONTGOMERY, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Nashville, TN ➔ LEBANON, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> New Orleans, LA ➔ NEW ORLEANS, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='225'> Newburgh, NY ➔ MARLBORO, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> North Boston, MA ➔ NORTH BILLERICA, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='200'> North Charleston, SC ➔ HARLEYVILLE, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='575'> North Seattle, WA ➔ ARLINGTON, CA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='200'> Ocala, FL ➔ OCALA, FL</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='400'> Ogden, UT ➔ FARR WEST, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='375'> Oklahoma City, OK ➔ OKLAHOMA CITY, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Orlando North, FL ➔ APOPKA, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='200'> Orlando South, FL ➔ ORLANDO, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='800'> Pasco, WA ➔ PASCO, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='525'> Peoria, IL ➔ PEKIN, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='200'> Philadelphia, PA ➔ PENNSBURG, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='225'> Philadelphia East, PA ➔ CHALFONT, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='300'> Phoenix, AZ ➔ PHOENIX, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='350'> Pittsburgh East, PA ➔ ADAMSBURG, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='375'> Pittsburgh North, PA ➔ ELLWOOD CITY, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='375'> Pittsburgh South, PA ➔ WEST MIFFLIN, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Portland North, OR ➔ PORTLAND, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='500'> Portland South, OR ➔ WOODBURN, CA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='200'> Punta Gorda, FL ➔ PUNTA GORDA, FL</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='275'> Raleigh, NC ➔ DUNN, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='150'> Rancho Cucamonga, CA ➔ RANCHO CUCAMONGA, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Reno, NV ➔ RENO, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='325'> Richmond, VA ➔ SANDSTON, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='325'> Richmond East, VA ➔ CHARLES CITY, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='375'> Rochester, NY ➔ LEROY, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Sacramento, CA ➔ SACRAMENTO, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='450'> Salt Lake City, UT ➔ NORTH SALT LAKE, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> San Antonio, TX ➔ SAN ANTONIO, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='175'> San Bernardino, CA ➔ COLTON, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='250'> San Diego, CA ➔ SAN DIEGO, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> San Jose, CA ➔ SAN MARTIN, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='100'> Savannah, GA ➔ SAVANNAH, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Scranton, PA ➔ DURYEA, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Seaford, DE ➔ SEAFORD, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='275'> Shreveport, LA ➔ SHREVEPORT, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='600'> Sikeston, MO ➔ SIKESTON, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='350'> So Sacramento, CA ➔ SACRAMENTO, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='150'> Somerville, NJ ➔ HILLSBOROUGH, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> South Boston, MA ➔ MENDON, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Southern Illinois, IL ➔ ALORTON, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Spartanburg, SC ➔ SPARTANBURG, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='700'> Spokane, WA ➔ AIRWAY HEIGHTS, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='500'> Springfield, MO ➔ ROGERSVILLE, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='575'> St. Cloud, MN ➔ AVON, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='475'> St. Louis, MO ➔ BRIDGETON, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='200'> Sun Valley, CA ➔ SUN VALLEY, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Syracuse, NY ➔ CENTRAL SQUARE, NJ</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='250'> Tallahassee, FL ➔ MIDWAY, FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='200'> Tampa South, FL ➔ RIVERVIEW, FL</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Tanner, AL ➔ TANNER, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Tifton, GA ➔ TIFTON, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='150'> Trenton, NJ ➔ WINDSOR, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Tucson, AZ ➔ TUCSON, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='400'> Tulsa, OK ➔ TULSA, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='325'> Vallejo, CA ➔ VALLEJO, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='175'> Van Nuys, CA ➔ VAN NUYS, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='300'> Waco, TX ➔ TEMPLE, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Walton, KY ➔ WALTON, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> Washington DC, MD ➔ WALDORF, NJ</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='150'> West Palm Beach, FL ➔ WEST PALM BEACH, FL</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> West Warren, MA ➔ WEST WARREN, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='425'> Wheeling, IL ➔ WHEELING, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='700'> Wichita, KS ➔ WICHITA, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> York Haven, PA ➔ YORK HAVEN, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='350'> Abilene, TX ➔  Hawley, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='225'> ACE - Carson, CA ➔  Carson, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='225'> ACE - Perris, CA ➔  Perris, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> ADESA Birmingham, AL ➔  Moody, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Akron-Canton, OH ➔  New Philadelphia, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Albany, NY ➔  Schenectady, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='525'> Albuquerque, NM ➔  Albuquerque, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Altoona, PA ➔  East Freedom, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='425'> Amarillo, TX ➔  Amarillo, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='150'> Anaheim, CA ➔  Anaheim, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='2000'> Anchorage, AK ➔  Wasilla, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Appleton, WI ➔  Appleton, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Asheville, NC ➔  Fletcher, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> Ashland, KY ➔  Ashland, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Atlanta, GA ➔  Loganville, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Atlanta East, GA ➔  Winder, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Atlanta North, GA ➔  Acworth, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='300'> Atlanta South, GA ➔  Lake City, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='225'> Austin, TX ➔  Dale, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='150'> Avenel New Jersey, NJ ➔  Avenel, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Baltimore, MD ➔  Baltimore, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Baton Rouge, LA ➔  Livingston, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='800'> Billings, MT ➔  Billings, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Birmingham, AL ➔  Bessemer, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='650'> Boise, ID ➔  Meridian, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='300'> Boston - Shirley, MA ➔  Shirley, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='500'> Bowling Green, KY ➔  Bowling Green, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='225'> Bridgeport, PA ➔  Bridgeport, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Buckhannon, WV ➔  Buckhannon, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='425'> Buffalo, NY ➔  Buffalo, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='475'> Burlington, VT ➔  Essex, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='900'> Casper, WY ➔  Casper, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='150'> Central New Jersey, NJ ➔  Morganville, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='225'> Charleston, SC ➔  Ravenel, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Charlotte, NC ➔  Charlotte, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Chattanooga, TN ➔  Chattanooga, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='550'> Chicago-North, IL ➔  East Dundee, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Chicago-South, IL ➔  Markham, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Chicago-West, IL ➔  Aurora, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Cincinnati, OH ➔  West Chester, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='450'> Cincinnati-South, OH ➔  Amelia, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Clearwater, FL ➔  Clearwater, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Cleveland, OH ➔  Lorain, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='150'> Colton, CA ➔  Colton, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='200'> Columbia, SC ➔  Columbia, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='550'> Columbus, OH ➔  Grove City, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='300'> Concord, NC ➔  Concord, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> Corpus Christi, TX ➔  Corpus Christi, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Culpeper, VA ➔  Culpeper, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='225'> Dallas, TX ➔  Wilmer, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Davenport, IA ➔  Davenport, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='450'> Dayton, OH ➔  Dayton, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='525'> Denver, CO ➔  Denver, TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='575'> Denver East, CO ➔  Commerce City, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='600'> Des Moines, IA ➔  De Soto, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='450'> Detroit, MI ➔  Belleville, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Dothan, AL ➔  Headland, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Dundalk, MD ➔  Dundalk, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='350'> East Bay, CA ➔  Bay Point, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='400'> El Paso, TX ➔  El Paso, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='475'> Erie, PA ➔  Garland, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='525'> Eugene, OR ➔  Eugene, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='900'> Fargo, ND ➔  Fargo, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='425'> Fayetteville, AR ➔  Lincoln, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Flint, MI ➔  Flint, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='175'> Fontana, CA ➔  Fontana, CA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='200'> Fort Myers, FL ➔  North Fort Myers, FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='175'> Fort Pierce, FL ➔  Fort Pierce, FL</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='300'> Fort Worth North, TX ➔  Justin, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='300'> Fredericksburg-South, VA ➔  Fredericksburg, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='325'> Fremont, CA ➔  Fremont, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='275'> Fresno, CA ➔  Fresno, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='625'> Grand Rapids, MI ➔  Byron Center, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='325'> Greensboro, NC ➔  Graham, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Greenville, SC ➔  Simpsonville, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Grenada, MS ➔  Grenada, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='375'> Gulf Coast, MS ➔  Moss Point, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Hartford, CT ➔  East Windsor, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Hartford-South, CT ➔  Middletown, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='200'> High Desert, CA ➔  Hesperia, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='1800'> Honolulu, HI ➔  Kapolei, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='175'> Houston, TX ➔  Houston, TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='125'> Houston South, TX ➔  Rosharon, TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='125'> Houston-North, TX ➔  Houston, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='375'> Huntsville, AL ➔  Athens, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='250'> IAA Dallas/Ft Worth, TX ➔  Grand Prairie, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Indianapolis, IN ➔  Indianapolis, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Jackson, MS ➔  Byram, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='175'> Jacksonville, FL ➔  Jacksonville, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Kansas City, KS ➔  Kansas City, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Knoxville, TN ➔  Knoxville, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> Lafayette, LA ➔  Lafayette, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='300'> Las Vegas, NV ➔  Henderson, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Laurel, MD ➔  Laurel, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='225'> Lexington, SC ➔  Lexington, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> Lincoln, IL ➔  Lincoln, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='450'> Little Rock, AR ➔  Scott, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Long Island, NY ➔  Medford, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> Longview, TX ➔  Longview, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='125'> Los Angeles, CA ➔  Gardena, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='450'> Louisville, KY ➔  Shepherdsville, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='450'> Louisville North, KY ➔  Eminence, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='425'> Lubbock, TX ➔  Lubbock, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Macon, GA ➔  Macon, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Manchester, NH ➔  Salem, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> McAllen, TX ➔  Donna, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Memphis, TN ➔  Memphis, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Metro DC, MD ➔  Brandywine, NJ</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='100'> Miami, FL ➔  Opa Locka, FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='125'> Miami-North, FL ➔  Pembroke Pines, FL</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='475'> Milwaukee, WI ➔  Sussex, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='550'> Minneapolis/St. Paul, MN ➔  SAINT PAUL, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='875'> Missoula, MT ➔  Missoula, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Nashville, TN ➔  Nashville, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> New Castle, DE ➔  New Castle, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='325'> New Orleans, LA ➔  Covington, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='325'> New Orleans East, LA ➔  New Orleans, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='200'> Newburgh, NY ➔  Rock Tavern, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='175'> North Hollywood, CA ➔  Los Angeles, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='150'> Northern New Jersey, NJ ➔  Carteret, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Northern Virginia, VA ➔  Fredericksburg, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='400'> Oklahoma City, OK ➔  Oklahoma City, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='650'> Omaha, NE ➔  Springfield, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='200'> Orlando, FL ➔  Orlando, GA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='200'> Orlando-North, FL ➔  Sanford, FL</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='475'> Paducah, KY ➔  Paducah, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Pensacola, FL ➔  Milton, GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='450'> Permian Basin, TX ➔  Odessa, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='200'> Philadelphia, PA ➔  Conshohocken, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='300'> Phoenix, AZ ➔  Phoenix, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Pittsburgh, PA ➔  Aliquippa, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Pittsburgh-North, PA ➔  Gibsonia, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Portage, WI ➔  Portage, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='425'> Portland - Gorham, ME ➔  Gorham, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='500'> Portland, OR ➔  Portland, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='500'> Portland West, OR ➔  Portland, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='325'> Providence, RI ➔  East Providence, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='375'> Pulaski, VA ➔  Pulaski, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Raleigh, NC ➔  Clayton, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='600'> Reno, NV ➔  Mccarran, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='325'> Richmond, VA ➔  Ashland, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Roanoke, VA ➔  Montvale, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Rochester, NY ➔  Bergen, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='375'> Sacramento, CA ➔  Rancho Cordova, CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='450'> Salt Lake City, UT ➔  Ogden, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> San Antonio, TX ➔  San Antonio, TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='250'> San Antonio-South, TX ➔  San Antonio, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='225'> San Diego, CA ➔  San Diego, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='100'> Savannah, GA ➔  Rincon, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Scranton, PA ➔  Pittston, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='550'> Seattle, WA ➔  Puyallup, CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> Shady Spring, WV ➔  Shady Spring, NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='250'> Shreveport, LA ➔  Greenwood, TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='825'> Sioux Falls, SD ➔  Sioux Falls, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> South Bend, IN ➔  South Bend, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='175'> Southern New Jersey, NJ ➔  Turnersville, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Specialty Division, IL ➔  Schaumburg, NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='750'> Spokane, WA ➔  Spokane Valley, CA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='500'> Springfield, MO ➔  Springfield, GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='500'> St. Louis, IL ➔  Granite City, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Suffolk, VA ➔  Suffolk, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='300'> Syracuse, NY ➔  Cicero, NJ</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='225'> Tampa, FL ➔  Palmetto, FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='275'> Tampa North, FL ➔  Hudson, FL</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Taunton, MA ➔  East Taunton, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Templeton, MA ➔  Templeton, NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='375'> Tidewater, VA ➔  Yorktown, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Tifton, GA ➔  Tifton, GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='350'> Tucson, AZ ➔  Tucson, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='400'> Tulsa, OK ➔  Tulsa, TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='750'> Western Colorado, CO ➔  Delta, CA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='475'> Wichita, KS ➔  Park City, TX</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='300'> Wilmington, NC ➔  Castle Hayne, GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> York Springs, PA ➔  York Springs, NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='350'> Birmingham, AL ➔ GA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='375'> Tucson, AZ ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Tolleson, AZ ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Conway, AR ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='200'> Anaheim, CA ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Fresno, CA ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='250'> Riverside, CA ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='250'> Oceanside, CA ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='400'> Hayward, CA ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='175'> Fontana, CA ➔ CA</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='475'> Aurora, CO ➔ CA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='225'> Orlando, FL ➔ FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='275'> Daytona Beach, FL ➔ FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='150'> Davie, FL ➔ FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='225'> Fort Myers, FL ➔ FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='250'> Jacksonville, FL ➔ FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='275'> Lakeland, FL ➔ FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='225'> Ocoee, FL ➔ FL</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='150'> West Palm Beach, FL ➔ FL</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Pensacola, FL ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Clearwater, FL  ➔ GA</option>
-											<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='200'> Tampa, FL ➔ FL</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='275'> College Park, GA ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Atlanta, GA  ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='250'> Kingston, GA ➔ GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='575'> Matteson, IL ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='550'> Indianapolis, IN ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='650'> Clarksville, IN ➔ NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='350'> Scott, LA  ➔ TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='350'> Slidell, LA ➔ TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='325'> Elkridge, MD ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='350'> North Dighton, MA ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Carleton, MI ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='575'> Mt. Morris, MI ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Maple Grove, MN ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='700'> Shakopee, MN ➔ NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='450'> Hattiesburg, MS ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='525'> Kansas City, MO ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='475'> Poplar Bluff, MO ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='500'> Bridgeton, MO ➔ GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='700'> Omaha, NE ➔ NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Las Vegas, NV ➔ CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='175'> Fairfield, NJ ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='200'> Bordentown, NJ ➔ NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='600'> Albuquerque, NM ➔ TX</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='275'> Clifton Park, NY ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='250'> Newburgh, NY ➔ NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Concord, NC ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Kenly, NC ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='450'> Statesville, NC ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Wilmington, NC ➔ GA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Hamilton, OH ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='500'> Cleveland, OH ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='500'> Grove City, OH ➔ NJ</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='400'> Sapulpa, OK ➔ TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='550'> Portland, OR ➔ CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='300'> Grantville, PA ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='250'> Manheim, PA ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='275'> Hatfield, PA ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='450'> Cranberry Township, PA ➔ NJ</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Darlington, SC ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Greer, SC ➔ GA</option>
-											<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Mount Juliet, TN ➔ GA</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='250'> Dallas, TX ➔ TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='275'> Euless, TX ➔ TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='450'> El Paso, TX ➔ TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='200'> Houston, TX ➔ TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='250'> San Antonio, TX ➔ TX</option>
-											<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='200'> Houston, TX ➔ TX</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='450'> Woods Cross, UT ➔ CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='300'> Fredericksburg, VA ➔ NJ</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Harrisonburg, VA ➔ NJ</option>
-											<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='600'> Kent, WA ➔ CA</option>
-											<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='650'> Caledonia, WI ➔ NJ</option>
-										</select>
-										<input type="hidden" name="car_city" value="">
-										<input type="hidden" name="car_port" value="">
-										<input type="hidden" name="car_days" value="">
-									</div>
-									<div class="col text-right"><b><span class="js-result-ship1">0</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-10">Доставка с США (порт <span class="js-result-ship_port"></span>) в  - <span class="js-result-ship_days">0</span> дней</div>
-									<div class="col text-right"><b><span class="js-result-ship2">0</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-9">Страховка авто (2% от стоимости)</div>
-									<div class="col text-right"><b><span class="js-result-insur">0</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-10">Таможенные платежи</div>
-									<div class="col text-right"><b><span class="js-result-rastamojka">0</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-9">Экспедирование порт Одесса и таможенная очистка</div>
-									<div class="col text-right"><b><span class="js-result-sertification">550</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-9">Стоянка авто в порту</div>
-									<div class="col text-right"><b><span class="js-result-park">50</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-10">Комиссия AUTOMAN</div>
-									<div class="col text-right"><b><span class="js-result-sertification">600</span>$</b></div><input type="hidden" name="car_sert" value="300">
-								</div>
-							</div>			
-							<div class="calc-section_table_row calc-section_table_itogo">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-9">
-									Итоговая стоимость</div>
-									<div class="col text-right"><b><span class="js-result-total_price">0</span>$</b></div>
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-9">Сертификация</div>
-									<div class="col text-right"><b><span class="js-result-sertification">220</span>$</b></div>
-									<input type="hidden" name="car_sert" value="300">
-								</div>
-							</div>
-							<div class="calc-section_table_row">
-								<div class="row row-mg-5 row-vertical row-justify">
-									<div class="col-5">Налоги в пенсионный фонд</div>
-									<div class="col-5"><span class="js-result-pension_single">0</span>%</div>
-									<div class="col text-right"><b><span class="js-result-pension">0</span>$</b></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
+<div class="wrap mb-big">
+	<div class="maintitle">Расчет стоимости</div>
+	<form class="calc js-calc-form" action="file:///D:/print/" target="_blank" method="post">
+		<input type="hidden" name="course" value="1.1704" class="js-car-course">
+		<input type="hidden" name="course_grn" value="25.14" class="js-car-course-grn">
+		<input type="hidden" name="course_lei" value="0.059" class="js-car-course-lei">
+		<input type="hidden" name="car_bid" value="">
+		<input type="hidden" name="car_auction" value="">
+		<input type="hidden" name="car_delivery" value="">
+		<input type="hidden" name="car_delivery2" value="">
+		<input type="hidden" name="car_acciz" value="">
+		<input type="hidden" name="car_acciz_single" value="">
+		<input type="hidden" name="car_poshlina" value="">
+		<input type="hidden" name="car_poshlina_per" value="">
+		<input type="hidden" name="car_nds" value="">
+		<input type="hidden" name="car_nds_per" value="">
+		<input type="hidden" name="car_pf" value="">
+		<input type="hidden" name="car_pf_single" value="">
+		<input type="hidden" name="car_avtopmr" value="">
+		<input type="hidden" name="car_avtopmr_type" value="">
+		<input type="hidden" name="car_exp" value="">
+		<input type="hidden" name="car_rastamojka_per" value="">
+		<input type="hidden" name="car_rastamojka" value="">
+		<input type="hidden" name="car_total" value="">
+		<input type="hidden" name="car_insur" value="">
+		<input type="hidden" name="car_park" value="">
+		<div class="row">
+			<div class="col-5 col-sm-12 calc-section calc-section_form">
+				<div class="form-row">
+					<div class="form-label form-label_fixed"><img src="file:///D:/uploads/car1.svg" class="js-calc-car-image" alt=""></div>
+					<select name="car" class="txt txt100 txt-big js-calc-car">
+						<option data-id="1" value="Легковой автомобиль" data-img="/uploads/car1.svg" selected="">Легковой автомобиль</option>
+						<option data-id="2" value="Грузовой автомобиль" data-img="/uploads/car2.svg">Грузовой автомобиль</option>
+						<option data-id="3" value="Мотоцикл" data-img="/uploads/car3.svg?3">Мотоцикл</option>
+					</select>
+				</div>
+				<div class="form-row">
+					<div class="form-label form-label_fixed">Цена авто</div>
+					<input type="number" name="price" value="10000" class="txt txt-big js-car-price" step="100" min="500">
+				</div>
+				<div class="form-row">
+					<div class="form-label form-label_fixed">Объем двиг.</div>
+					<select name="volume" class="txt txt-big js-car-volume">
+						<option value="0.1">0.1</option>
+						<option value="0.2">0.2</option>
+						<option value="0.3">0.3</option>
+						<option value="0.4">0.4</option>
+						<option value="0.5">0.5</option>
+						<option value="0.6">0.6</option>
+						<option value="0.7">0.7</option>
+						<option value="0.8">0.8</option>
+						<option value="0.9">0.9</option>
+						<option value="1.0">1.0</option>
+						<option value="1.1">1.1</option>
+						<option value="1.2">1.2</option>
+						<option value="1.3">1.3</option>
+						<option value="1.4">1.4</option>
+						<option value="1.5">1.5</option>
+						<option value="1.6" selected="selected">1.6</option>
+						<option value="1.7">1.7</option>
+						<option value="1.8">1.8</option>
+						<option value="1.9">1.9</option>
+						<option value="2.0">2.0</option>
+						<option value="2.1">2.1</option>
+						<option value="2.2">2.2</option>
+						<option value="2.3">2.3</option>
+						<option value="2.4">2.4</option>
+						<option value="2.5">2.5</option>
+						<option value="2.6">2.6</option>
+						<option value="2.7">2.7</option>
+						<option value="2.8">2.8</option>
+						<option value="2.9">2.9</option>
+						<option value="3.0">3.0</option>
+						<option value="3.1">3.1</option>
+						<option value="3.2">3.2</option>
+						<option value="3.3">3.3</option>
+						<option value="3.4">3.4</option>
+						<option value="3.5">3.5</option>
+						<option value="3.6">3.6</option>
+						<option value="3.7">3.7</option>
+						<option value="3.8">3.8</option>
+						<option value="3.9">3.9</option>
+						<option value="4.0">4.0</option>
+						<option value="4.1">4.1</option>
+						<option value="4.2">4.2</option>
+						<option value="4.3">4.3</option>
+						<option value="4.4">4.4</option>
+						<option value="4.5">4.5</option>
+						<option value="4.6">4.6</option>
+						<option value="4.7">4.7</option>
+						<option value="4.8">4.8</option>
+						<option value="4.9">4.9</option>
+						<option value="5.0">5.0</option>
+						<option value="5.1">5.1</option>
+						<option value="5.2">5.2</option>
+						<option value="5.3">5.3</option>
+						<option value="5.4">5.4</option>
+						<option value="5.5">5.5</option>
+						<option value="5.6">5.6</option>
+						<option value="5.7">5.7</option>
+						<option value="5.8">5.8</option>
+						<option value="5.9">5.9</option>
+						<option value="6.0">6.0</option>
+						<option value="6.1">6.1</option>
+						<option value="6.2">6.2</option>
+						<option value="6.3">6.3</option>
+						<option value="6.4">6.4</option>
+					</select>
+				</div>
+				<div class="form-row">
+					<label class="rb form-label_inline"><input value="Бензин" class="js-car-fuel" type="radio" name="fuel" checked=""><span class="rb-visual"></span> Бензин</label>
+					<label class="rb form-label_inline"><input value="Дизель" class="js-car-fuel" type="radio" name="fuel"><span class="rb-visual"></span> Дизель</label>
+					<label class="rb form-label_inline"><input value="Гибрид" class="js-car-fuel" data-toggle-calc="#calc-gibrid-info" type="radio" name="fuel"><span class="rb-visual"></span> Гибрид</label>
+					<label class="rb form-label_inline"><input value="Электро" class="js-car-fuel" data-toggle-calc="#calc-electro-info" type="radio" name="fuel"><span class="rb-visual"></span> Электро</label>
+				</div>
+				<div class="form-row form-meta hidden data-toggle-calc" id="calc-gibrid-info">
+					<i class="ico ico-info-dark"></i> На данный момент только BMW I3 растамаживается по ставкам гибридных автомобилей. Остальные - как бензиновые.
+				</div>
+				<div class="form-row hidden data-toggle-calc" id="calc-electro-info">
+					<div class="form-label form-label_fixed">Батарея, кВт⋅ч</div>
+					<input type="number" name="battery" value="85" class="txt txt-big js-car-battery" step="1" min="10">
+				</div>
+				<div class="form-row">
+					<div class="form-label form-label_fixed">Год выпуска</div>
+					<select name="age" class="txt txt-big js-car-age">
+						<option value="1" selected="">2020</option>
+						<option value="1">2019</option>
+						<option value="1">2018</option>
+						<option value="2">2017</option>
+						<option value="3">2016</option>
+						<option value="4">2015</option>
+						<option value="5">2014</option>
+						<option value="6">2013</option>
+						<option value="7">2012</option>
+						<option value="8">2011</option>
+						<option value="9">2010</option>
+						<option value="10">2009</option>
+						<option value="11">2008</option>
+						<option value="12">2007</option>
+						<option value="13">2006</option>
+						<option value="14">2005</option>
+						<option value="15">2004 и старше</option>
+					</select>
+					<input type="hidden" name="car_age" value="">
+				</div>
+				<div>
+					<input type="button" value="Рассчитать" class="btn btn-mid js-calc-push">
+				</div>
 			</div>
+			<div class="col-7 col-sm-12 calc-section calc-section_table">
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-9">Стоимость авто</div>
+						<div class="col text-right"><b><span class="js-result-price">0</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-5">Комиссия аукциона</div>
+						<div class="col-4">
+							<select class="txt js-car-auction" name="auction">
+								<option selected="" value="copart" data-fares="0.01:49.99:60|50.00:99.99:60|100.00:199.99:123|200.00:299.99:148|300.00:349.99:173|350.00:399.99:173|400.00:449.99:208|450.00:499.99:208|500.00:549.99:233|550.00:599.99:238|600.00:699.99:248|700.00:799.99:263|800.00:899.99:278|900.00:999.99:293|1000.00:1199.99:328|1200.00:1299.99:353|1300.00:1399.99:368|1400.00:1499.99:378|1500.00:1599.99:398|1600.00:1699.99:415|1700.00:1799.99:423|1800.00:1999.99:438|2000.00:2399.99:473|2400.00:2499.99:483|2500.00:2999.99:498|3000.00:3499.99:548|3500.00:3999.99:598|4000.00:4499.99:633|4500.00:4999.99:658|5000.00:5999.99:683|6000.00:7499.99:728|7500.00:9999.99:763|10000.00:14999.99:788|15000:10000000:188">Copart</option>
+								<option value="iaai" data-fares="0.01:49.99:60|50.00:99.99:60|100.00:199.99:123|200.00:299.99:148|300.00:349.99:173|350.00:399.99:173|400.00:449.99:208|450.00:499.99:208|500.00:549.99:233|550.00:599.99:238|600.00:699.99:248|700.00:799.99:263|800.00:899.99:278|900.00:999.99:293|1000.00:1199.99:328|1200.00:1299.99:353|1300.00:1399.99:368|1400.00:1499.99:378|1500.00:1599.99:398|1600.00:1699.99:415|1700.00:1799.99:423|1800.00:1999.99:438|2000.00:2399.99:473|2400.00:2499.99:483|2500.00:2999.99:498|3000.00:3499.99:548|3500.00:3999.99:598|4000.00:4499.99:633|4500.00:4999.99:658|5000.00:5999.99:683|6000.00:7499.99:728|7500.00:9999.99:763|10000.00:14999.99:788|15000:10000000:188">IAAI</option>
+								<option value="heim" data-fares="0:999999:450">Manheim</option>
+							</select>
+						</div>
+						<div class="col text-right"><b><span class="js-result-comission">0</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-5">Доставка по США</div>
+						<div class="col-5">
+							<select class="txt js-calc-city" name="city">
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='350'> Abilene, TX ➔ ABILENE, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> Albany, NY ➔ ALBANY, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='525'> Albuquerque, NM ➔ ALBUQUERQUE, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Altoona, PA ➔ EBENSBURG, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='400'> Amarillo, TX ➔ AMARILLO, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='2100'> Anchorage, AK ➔ ANCHORAGE, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='425'> Andrews, TX ➔ ANDREWS, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='325'> Antelope, CA ➔ ANTELOPE, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Appleton, WI ➔ APPLETON, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Atlanta East, GA ➔ LOGANVILLE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Atlanta North, GA ➔ GAINESVILLE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Atlanta South, GA ➔ ELLENWOOD, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Atlanta West, GA ➔ AUSTELL, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> Austin, TX ➔ NEW BRAUNFELS, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='275'> Bakersfield, CA ➔ BAKERSFIELD, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> Baltimore, MD ➔ FINKSBURG, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Baton Rouge, LA ➔ GREENWELL SPRINGS, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='950'> Billings, MT ➔ BILLINGS, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='325'> Birmingham, AL ➔ HUEYTOWN, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='600'> Boise, ID ➔ NAMPA, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Buffalo, NY ➔ ANGOLA, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='350'> Candia, NH ➔ CANDIA, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Cartersville, GA ➔ CARTERSVILLE, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='850'> Casper, WY ➔ CASPER, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='325'> Chambersburg, PA ➔ CHAMBERSBURG, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Charleston, WV ➔ HURRICANE, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='525'> Chicago North, IL ➔ ELGIN, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Chicago South, IL ➔ CHICAGO HEIGHTS, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='275'> China Grove, NC ➔ CHINA GROVE, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Cleveland East, OH ➔ NORTHFIELD, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Cleveland West, OH ➔ COLUMBIA STATION, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='700'> Colorado Springs, CO ➔ COLORADO SPRINGS, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='650'> Columbia, MO ➔ COLUMBIA, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='200'> Columbia, SC ➔ COLUMBIA, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Columbus, OH ➔ COLUMBUS, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='275'> Corpus Christi, TX ➔ CORPUS CHRISTI, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='200'> CrashedToys Atlanta, GA ➔ EAST POINT, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> CrashedToys Dallas, TX ➔ DALLAS, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> CrashedToys Minneapolis, MN ➔ CENTRAL AVE NE BLAINE, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='350'> Crashedtoys Sacramento, CA ➔ SACRAMENTO, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> Dallas, TX ➔ DALLAS, TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> Dallas South, TX ➔ WILMER, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Danville, VA ➔ CHATHAM, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Davenport, IA ➔ ELDRIDGE, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='450'> Dayton, OH ➔ MORAINE, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='575'> Denver, CO ➔ BRIGHTON, TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='550'> Denver Central, CO ➔ DENVER, TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='550'> Denver South, CO ➔ LITTLETON, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Des Moines, IA ➔ DES MOINES, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='450'> Detroit, MI ➔ WOODHAVEN, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='425'> El Paso, TX ➔ ANTHONY, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Eugene, OR ➔ EUGENE, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Exeter, RI ➔ EXETER, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='425'> Fayetteville, AR ➔ PRAIRIE GROVE, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Flint, MI ➔ DAVISON, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='525'> Fort Wayne, IN ➔ HARTFORD CITY, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Fredericksburg, VA ➔ FREDERICKSBURG, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='275'> Fresno, CA ➔ FRESNO, CA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='175'> Ft. Pierce, FL ➔ FORT PIERCE, FL</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='225'> Ft. Worth, TX ➔ HASLET, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='200'> Glassboro East, NJ ➔ GLASSBORO, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Graham, WA ➔ GRAHAM, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='475'> Hammond, IN ➔ HAMMOND, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='350'> Hampton, VA ➔ HAMPTON, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Harrisburg, PA ➔ GRANTVILLE, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Hartford, CT ➔ NEW BRITAIN, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Hartford Springfield, CT ➔ EAST GRANBY, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Hayward, CA ➔ HAYWARD, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='900'> Helena, MT ➔ HELENA, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='1700'> Honolulu, HI ➔ KAPOLEI, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='200'> Houston, TX ➔ HOUSTON, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Indianapolis, IN ➔ INDIANAPOLIS, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='450'> Ionia, MI ➔ PORTLAND, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Jackson, MS ➔ FLORENCE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='175'> Jacksonville East, FL ➔ JACKSONVILLE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='175'> Jacksonville West, FL ➔ JACKSONVILLE, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Kansas City, KS ➔ KANSAS CITY, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='825'> Kincheloe, MI ➔ KINCHELOE, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Knoxville, TN ➔ MADISONVILLE, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Lansing, MI ➔ LANSING, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='300'> Las Vegas, NV ➔ LAS VEGAS, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='475'> Lexington East, KY ➔ LEXINGTON, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='475'> Lexington West, KY ➔ LAWRENCEBURG, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='650'> Lincoln, NE ➔ GREENWOOD, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='450'> Little Rock, AR ➔ CONWAY, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='175'> Long Beach, CA ➔ WILMINGTON, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='225'> Long Island, NY ➔ BROOKHAVEN, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> Longview, TX ➔ LONGVIEW, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='125'> Los Angeles, CA ➔ LOS ANGELES, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='450'> Louisville, KY ➔ LOUISVILLE, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> Lufkin, TX ➔ LUFKIN, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='275'> Lumberton, NC ➔ Lumberton, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='400'> Lyman, ME ➔ LYMAN, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Macon, GA ➔ BYRON, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Madison, WI ➔ MADISONVILLE, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Martinez, CA ➔ MARTINEZ, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='300'> McAllen, TX ➔ MERCEDES, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> Mebane, NC ➔ MEBANE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='375'> Memphis, TN ➔ MEMPHIS, GA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='100'> Miami Central, FL ➔ MIAMI, FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='100'> Miami North, FL ➔ MIAMI, FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='100'> Miami South, FL ➔ HOMESTEAD, FL</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='550'> Milwaukee, WI ➔ CUDAHY, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Minneapolis, MN ➔ BLAINE, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='550'> Minneapolis North, MN ➔ HAM LAKE, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='325'> Mobile, AL ➔ EIGHT MILE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Mocksville, NC ➔ MOCKSVILLE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Montgomery, AL ➔ MONTGOMERY, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Nashville, TN ➔ LEBANON, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='400'> New Orleans, LA ➔ NEW ORLEANS, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='225'> Newburgh, NY ➔ MARLBORO, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> North Boston, MA ➔ NORTH BILLERICA, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='200'> North Charleston, SC ➔ HARLEYVILLE, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='575'> North Seattle, WA ➔ ARLINGTON, CA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='200'> Ocala, FL ➔ OCALA, FL</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='400'> Ogden, UT ➔ FARR WEST, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='375'> Oklahoma City, OK ➔ OKLAHOMA CITY, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='225'> Orlando North, FL ➔ APOPKA, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='200'> Orlando South, FL ➔ ORLANDO, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='800'> Pasco, WA ➔ PASCO, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='525'> Peoria, IL ➔ PEKIN, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='200'> Philadelphia, PA ➔ PENNSBURG, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='225'> Philadelphia East, PA ➔ CHALFONT, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='300'> Phoenix, AZ ➔ PHOENIX, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='350'> Pittsburgh East, PA ➔ ADAMSBURG, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='375'> Pittsburgh North, PA ➔ ELLWOOD CITY, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='375'> Pittsburgh South, PA ➔ WEST MIFFLIN, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Portland North, OR ➔ PORTLAND, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='500'> Portland South, OR ➔ WOODBURN, CA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='200'> Punta Gorda, FL ➔ PUNTA GORDA, FL</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='275'> Raleigh, NC ➔ DUNN, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='150'> Rancho Cucamonga, CA ➔ RANCHO CUCAMONGA, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='525'> Reno, NV ➔ RENO, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='325'> Richmond, VA ➔ SANDSTON, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='325'> Richmond East, VA ➔ CHARLES CITY, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='375'> Rochester, NY ➔ LEROY, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Sacramento, CA ➔ SACRAMENTO, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='450'> Salt Lake City, UT ➔ NORTH SALT LAKE, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='250'> San Antonio, TX ➔ SAN ANTONIO, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='175'> San Bernardino, CA ➔ COLTON, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='250'> San Diego, CA ➔ SAN DIEGO, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> San Jose, CA ➔ SAN MARTIN, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='100'> Savannah, GA ➔ SAVANNAH, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='250'> Scranton, PA ➔ DURYEA, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Seaford, DE ➔ SEAFORD, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='275'> Shreveport, LA ➔ SHREVEPORT, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='600'> Sikeston, MO ➔ SIKESTON, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='350'> So Sacramento, CA ➔ SACRAMENTO, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='150'> Somerville, NJ ➔ HILLSBOROUGH, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> South Boston, MA ➔ MENDON, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Southern Illinois, IL ➔ ALORTON, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Spartanburg, SC ➔ SPARTANBURG, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='700'> Spokane, WA ➔ AIRWAY HEIGHTS, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='500'> Springfield, MO ➔ ROGERSVILLE, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='575'> St. Cloud, MN ➔ AVON, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='475'> St. Louis, MO ➔ BRIDGETON, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='200'> Sun Valley, CA ➔ SUN VALLEY, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> Syracuse, NY ➔ CENTRAL SQUARE, NJ</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='250'> Tallahassee, FL ➔ MIDWAY, FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='200'> Tampa South, FL ➔ RIVERVIEW, FL</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='350'> Tanner, AL ➔ TANNER, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='cop' value='250'> Tifton, GA ➔ TIFTON, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='150'> Trenton, NJ ➔ WINDSOR, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='375'> Tucson, AZ ➔ TUCSON, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='400'> Tulsa, OK ➔ TULSA, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='325'> Vallejo, CA ➔ VALLEJO, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='cop' value='175'> Van Nuys, CA ➔ VAN NUYS, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='cop' value='300'> Waco, TX ➔ TEMPLE, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='500'> Walton, KY ➔ WALTON, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> Washington DC, MD ➔ WALDORF, NJ</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='cop' value='150'> West Palm Beach, FL ➔ WEST PALM BEACH, FL</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='300'> West Warren, MA ➔ WEST WARREN, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='425'> Wheeling, IL ➔ WHEELING, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='700'> Wichita, KS ➔ WICHITA, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='cop' value='275'> York Haven, PA ➔ YORK HAVEN, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='350'> Abilene, TX ➔  Hawley, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='225'> ACE - Carson, CA ➔  Carson, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='225'> ACE - Perris, CA ➔  Perris, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> ADESA Birmingham, AL ➔  Moody, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Akron-Canton, OH ➔  New Philadelphia, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Albany, NY ➔  Schenectady, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='525'> Albuquerque, NM ➔  Albuquerque, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Altoona, PA ➔  East Freedom, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='425'> Amarillo, TX ➔  Amarillo, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='150'> Anaheim, CA ➔  Anaheim, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='2000'> Anchorage, AK ➔  Wasilla, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Appleton, WI ➔  Appleton, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Asheville, NC ➔  Fletcher, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> Ashland, KY ➔  Ashland, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Atlanta, GA ➔  Loganville, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Atlanta East, GA ➔  Winder, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Atlanta North, GA ➔  Acworth, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='300'> Atlanta South, GA ➔  Lake City, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='225'> Austin, TX ➔  Dale, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='150'> Avenel New Jersey, NJ ➔  Avenel, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Baltimore, MD ➔  Baltimore, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Baton Rouge, LA ➔  Livingston, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='800'> Billings, MT ➔  Billings, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Birmingham, AL ➔  Bessemer, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='650'> Boise, ID ➔  Meridian, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='300'> Boston - Shirley, MA ➔  Shirley, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='500'> Bowling Green, KY ➔  Bowling Green, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='225'> Bridgeport, PA ➔  Bridgeport, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Buckhannon, WV ➔  Buckhannon, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='425'> Buffalo, NY ➔  Buffalo, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='475'> Burlington, VT ➔  Essex, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='900'> Casper, WY ➔  Casper, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='150'> Central New Jersey, NJ ➔  Morganville, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='225'> Charleston, SC ➔  Ravenel, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Charlotte, NC ➔  Charlotte, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Chattanooga, TN ➔  Chattanooga, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='550'> Chicago-North, IL ➔  East Dundee, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Chicago-South, IL ➔  Markham, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Chicago-West, IL ➔  Aurora, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Cincinnati, OH ➔  West Chester, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='450'> Cincinnati-South, OH ➔  Amelia, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Clearwater, FL ➔  Clearwater, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Cleveland, OH ➔  Lorain, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='150'> Colton, CA ➔  Colton, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='200'> Columbia, SC ➔  Columbia, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='550'> Columbus, OH ➔  Grove City, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='300'> Concord, NC ➔  Concord, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> Corpus Christi, TX ➔  Corpus Christi, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Culpeper, VA ➔  Culpeper, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='225'> Dallas, TX ➔  Wilmer, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Davenport, IA ➔  Davenport, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='450'> Dayton, OH ➔  Dayton, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='525'> Denver, CO ➔  Denver, TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='575'> Denver East, CO ➔  Commerce City, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='600'> Des Moines, IA ➔  De Soto, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='450'> Detroit, MI ➔  Belleville, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Dothan, AL ➔  Headland, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Dundalk, MD ➔  Dundalk, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='350'> East Bay, CA ➔  Bay Point, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='400'> El Paso, TX ➔  El Paso, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='475'> Erie, PA ➔  Garland, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='525'> Eugene, OR ➔  Eugene, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='900'> Fargo, ND ➔  Fargo, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='425'> Fayetteville, AR ➔  Lincoln, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='575'> Flint, MI ➔  Flint, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='175'> Fontana, CA ➔  Fontana, CA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='200'> Fort Myers, FL ➔  North Fort Myers, FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='175'> Fort Pierce, FL ➔  Fort Pierce, FL</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='300'> Fort Worth North, TX ➔  Justin, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='300'> Fredericksburg-South, VA ➔  Fredericksburg, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='325'> Fremont, CA ➔  Fremont, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='275'> Fresno, CA ➔  Fresno, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='625'> Grand Rapids, MI ➔  Byron Center, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='325'> Greensboro, NC ➔  Graham, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Greenville, SC ➔  Simpsonville, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Grenada, MS ➔  Grenada, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='375'> Gulf Coast, MS ➔  Moss Point, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Hartford, CT ➔  East Windsor, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Hartford-South, CT ➔  Middletown, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='200'> High Desert, CA ➔  Hesperia, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='1800'> Honolulu, HI ➔  Kapolei, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='175'> Houston, TX ➔  Houston, TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='125'> Houston South, TX ➔  Rosharon, TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='125'> Houston-North, TX ➔  Houston, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='375'> Huntsville, AL ➔  Athens, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='250'> IAA Dallas/Ft Worth, TX ➔  Grand Prairie, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Indianapolis, IN ➔  Indianapolis, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Jackson, MS ➔  Byram, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='175'> Jacksonville, FL ➔  Jacksonville, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Kansas City, KS ➔  Kansas City, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Knoxville, TN ➔  Knoxville, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> Lafayette, LA ➔  Lafayette, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='300'> Las Vegas, NV ➔  Henderson, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Laurel, MD ➔  Laurel, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='225'> Lexington, SC ➔  Lexington, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> Lincoln, IL ➔  Lincoln, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='450'> Little Rock, AR ➔  Scott, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Long Island, NY ➔  Medford, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> Longview, TX ➔  Longview, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='125'> Los Angeles, CA ➔  Gardena, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='450'> Louisville, KY ➔  Shepherdsville, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='450'> Louisville North, KY ➔  Eminence, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='425'> Lubbock, TX ➔  Lubbock, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Macon, GA ➔  Macon, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Manchester, NH ➔  Salem, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> McAllen, TX ➔  Donna, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='400'> Memphis, TN ➔  Memphis, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Metro DC, MD ➔  Brandywine, NJ</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='100'> Miami, FL ➔  Opa Locka, FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='125'> Miami-North, FL ➔  Pembroke Pines, FL</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='475'> Milwaukee, WI ➔  Sussex, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='550'> Minneapolis/St. Paul, MN ➔  SAINT PAUL, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='875'> Missoula, MT ➔  Missoula, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Nashville, TN ➔  Nashville, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> New Castle, DE ➔  New Castle, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='325'> New Orleans, LA ➔  Covington, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='325'> New Orleans East, LA ➔  New Orleans, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='200'> Newburgh, NY ➔  Rock Tavern, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='175'> North Hollywood, CA ➔  Los Angeles, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='150'> Northern New Jersey, NJ ➔  Carteret, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Northern Virginia, VA ➔  Fredericksburg, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='400'> Oklahoma City, OK ➔  Oklahoma City, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='650'> Omaha, NE ➔  Springfield, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='200'> Orlando, FL ➔  Orlando, GA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='200'> Orlando-North, FL ➔  Sanford, FL</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='475'> Paducah, KY ➔  Paducah, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='350'> Pensacola, FL ➔  Milton, GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='450'> Permian Basin, TX ➔  Odessa, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='200'> Philadelphia, PA ➔  Conshohocken, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='300'> Phoenix, AZ ➔  Phoenix, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Pittsburgh, PA ➔  Aliquippa, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Pittsburgh-North, PA ➔  Gibsonia, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Portage, WI ➔  Portage, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='425'> Portland - Gorham, ME ➔  Gorham, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='500'> Portland, OR ➔  Portland, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='500'> Portland West, OR ➔  Portland, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='325'> Providence, RI ➔  East Providence, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='375'> Pulaski, VA ➔  Pulaski, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='275'> Raleigh, NC ➔  Clayton, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='600'> Reno, NV ➔  Mccarran, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='325'> Richmond, VA ➔  Ashland, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Roanoke, VA ➔  Montvale, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Rochester, NY ➔  Bergen, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='375'> Sacramento, CA ➔  Rancho Cordova, CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='450'> Salt Lake City, UT ➔  Ogden, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='275'> San Antonio, TX ➔  San Antonio, TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='250'> San Antonio-South, TX ➔  San Antonio, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='225'> San Diego, CA ➔  San Diego, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='100'> Savannah, GA ➔  Rincon, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> Scranton, PA ➔  Pittston, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='550'> Seattle, WA ➔  Puyallup, CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> Shady Spring, WV ➔  Shady Spring, NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='250'> Shreveport, LA ➔  Greenwood, TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='825'> Sioux Falls, SD ➔  Sioux Falls, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='525'> South Bend, IN ➔  South Bend, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='175'> Southern New Jersey, NJ ➔  Turnersville, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='500'> Specialty Division, IL ➔  Schaumburg, NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='750'> Spokane, WA ➔  Spokane Valley, CA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='500'> Springfield, MO ➔  Springfield, GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='500'> St. Louis, IL ➔  Granite City, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='400'> Suffolk, VA ➔  Suffolk, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='300'> Syracuse, NY ➔  Cicero, NJ</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='225'> Tampa, FL ➔  Palmetto, FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='iaa' value='275'> Tampa North, FL ➔  Hudson, FL</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='275'> Taunton, MA ➔  East Taunton, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='350'> Templeton, MA ➔  Templeton, NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='375'> Tidewater, VA ➔  Yorktown, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='250'> Tifton, GA ➔  Tifton, GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='350'> Tucson, AZ ➔  Tucson, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='400'> Tulsa, OK ➔  Tulsa, TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='iaa' value='750'> Western Colorado, CO ➔  Delta, CA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='iaa' value='475'> Wichita, KS ➔  Park City, TX</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='iaa' value='300'> Wilmington, NC ➔  Castle Hayne, GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='iaa' value='250'> York Springs, PA ➔  York Springs, NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='350'> Birmingham, AL ➔ GA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='375'> Tucson, AZ ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Tolleson, AZ ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Conway, AR ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='200'> Anaheim, CA ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Fresno, CA ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='250'> Riverside, CA ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='250'> Oceanside, CA ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='400'> Hayward, CA ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='175'> Fontana, CA ➔ CA</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='475'> Aurora, CO ➔ CA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='225'> Orlando, FL ➔ FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='275'> Daytona Beach, FL ➔ FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='150'> Davie, FL ➔ FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='225'> Fort Myers, FL ➔ FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='250'> Jacksonville, FL ➔ FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='275'> Lakeland, FL ➔ FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='225'> Ocoee, FL ➔ FL</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='150'> West Palm Beach, FL ➔ FL</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Pensacola, FL ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Clearwater, FL  ➔ GA</option>
+								<option  data-port='FL' data-sea='650' data-days='35' data-target='man' value='200'> Tampa, FL ➔ FL</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='275'> College Park, GA ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Atlanta, GA  ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='250'> Kingston, GA ➔ GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='575'> Matteson, IL ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='550'> Indianapolis, IN ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='650'> Clarksville, IN ➔ NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='350'> Scott, LA  ➔ TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='350'> Slidell, LA ➔ TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='325'> Elkridge, MD ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='350'> North Dighton, MA ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Carleton, MI ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='575'> Mt. Morris, MI ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Maple Grove, MN ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='700'> Shakopee, MN ➔ NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='450'> Hattiesburg, MS ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='525'> Kansas City, MO ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='475'> Poplar Bluff, MO ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='500'> Bridgeton, MO ➔ GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='700'> Omaha, NE ➔ NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='300'> Las Vegas, NV ➔ CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='175'> Fairfield, NJ ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='200'> Bordentown, NJ ➔ NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='600'> Albuquerque, NM ➔ TX</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='275'> Clifton Park, NY ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='250'> Newburgh, NY ➔ NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Concord, NC ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Kenly, NC ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='450'> Statesville, NC ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Wilmington, NC ➔ GA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Hamilton, OH ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='500'> Cleveland, OH ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='500'> Grove City, OH ➔ NJ</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='400'> Sapulpa, OK ➔ TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='550'> Portland, OR ➔ CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='300'> Grantville, PA ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='250'> Manheim, PA ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='275'> Hatfield, PA ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='450'> Cranberry Township, PA ➔ NJ</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Darlington, SC ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='300'> Greer, SC ➔ GA</option>
+								<option  data-port='GA' data-sea='600' data-days='35' data-target='man' value='400'> Mount Juliet, TN ➔ GA</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='250'> Dallas, TX ➔ TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='275'> Euless, TX ➔ TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='450'> El Paso, TX ➔ TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='200'> Houston, TX ➔ TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='250'> San Antonio, TX ➔ TX</option>
+								<option  data-port='TX' data-sea='700' data-days='50' data-target='man' value='200'> Houston, TX ➔ TX</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='450'> Woods Cross, UT ➔ CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='300'> Fredericksburg, VA ➔ NJ</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='600'> Harrisonburg, VA ➔ NJ</option>
+								<option  data-port='CA' data-sea='825' data-days='60' data-target='man' value='600'> Kent, WA ➔ CA</option>
+								<option  data-port='NJ' data-sea='600' data-days='35' data-target='man' value='650'> Caledonia, WI ➔ NJ</option>
+							</select>
+							<input type="hidden" name="car_city" value="">
+							<input type="hidden" name="car_port" value="">
+							<input type="hidden" name="car_days" value="">
+						</div>
+						<div class="col text-right"><b><span class="js-result-ship1">0</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-10">Доставка с США (порт <span class="js-result-ship_port"></span>) в  - <span class="js-result-ship_days">0</span> дней</div>
+						<div class="col text-right"><b><span class="js-result-ship2">0</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-9">Страховка авто (2% от стоимости)</div>
+						<div class="col text-right"><b><span class="js-result-insur">0</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-10">Таможенные платежи</div>
+						<div class="col text-right"><b><span class="js-result-rastamojka">0</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-9">Экспедирование порт Одесса и таможенная очистка</div>
+						<div class="col text-right"><b><span class="js-result-sertification">550</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-9">Стоянка авто в порту</div>
+						<div class="col text-right"><b><span class="js-result-park">50</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-10">Комиссия AUTOMAN</div>
+						<div class="col text-right"><b><span class="js-result-sertification">600</span>$</b></div><input type="hidden" name="car_sert" value="300">
+					</div>
+				</div>			
+				<div class="calc-section_table_row calc-section_table_itogo">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-9">
+						Итоговая стоимость</div>
+						<div class="col text-right"><b><span class="js-result-total_price">0</span>$</b></div>
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-9">Сертификация</div>
+						<div class="col text-right"><b><span class="js-result-sertification">220</span>$</b></div>
+						<input type="hidden" name="car_sert" value="300">
+					</div>
+				</div>
+				<div class="calc-section_table_row">
+					<div class="row row-mg-5 row-vertical row-justify">
+						<div class="col-5">Налоги в пенсионный фонд</div>
+						<div class="col-5"><span class="js-result-pension_single">0</span>%</div>
+						<div class="col text-right"><b><span class="js-result-pension">0</span>$</b></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+	
+<!--[if lte IE 8]>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script>
+	var rastamojka_pmr = {
+		10: {
+			'fuel': [9.2, 0.45],
+			'electro': [4.6, 0.29]
+		},
+		7: {
+			'fuel': [7, 0.4],
+			'electro': [4.6, 0.29]
+		},
+		3: {
+			'fuel': [4.6, 0.29],
+			'electro': [4.6, 0.29]
+		},
+		0: {
+			'fuel': [2.3, 0.23],
+			'electro': [2.3, 0.23]
+		}
+	}
+
+	var rastamojka_md = {
+		0: {
+			'Бензин': [9.56, 12.23, 18.9, 31.14, 55.6],
+			'Дизель': [12.23, 31.14, 55.6]
+		},
+		3: {
+			'Бензин': [10, 12.67, 19.34, 31.58, 56.04],
+			'Дизель': [12.67, 31.58, 56.04]
+		},
+		5: {
+			'Бензин': [10.23, 12.9, 19.57, 31.81, 56.27],
+			'Дизель': [12.9, 31.81, 56.27]
+		},
+		7: {
+			'Бензин': [10.45, 13.12, 19.79, 32.03, 56.49],
+			'Дизель': [13.12, 32.03, 56.49]
+		},
+		8: {
+			'Бензин': [11.5, 14.49, 21.62, 35.2, 58.66],
+			'Дизель': [14.49, 35.2, 58.66]
+		},
+		9: {
+			'Бензин': [12.19, 15.17, 23.23, 37.03, 58.89],
+			'Дизель': [15.17, 37.03, 58.89]
+		},
+		10: {
+			'Бензин': [12.89, 16.33, 24.39, 38.88, 59.13],
+			'Дизель': [16.33, 38.88, 59.13]
+		}
+	}
+
+	poshlina_per = 0.1;
+	nds_per = 0.2;
+
+	acciz_limits = {
+		1: {
+			'limit_bens': 3,
+			'limit_bens_price': [50, 100],
+			'limit_dizel': 3.5,
+			'limit_dizel_price': [75, 150]
+		},
+		2: {
+			'limit_bens': 3,
+			'limit_bens_price': [50, 100],
+			'limit_dizel': 3.5,
+			'limit_dizel_price': [75, 150]
+		},
+		3: {
+			'limit_bens': .5,
+			'limit_bens_price': [62, 447],
+			'limit_dizel': .5,
+			'limit_dizel_price': [62, 447]
+		}
+	}
+
+	$(document).ready(function(){
+		for (let value of $(".js-calc-city option")) {
+			if (value.getAttribute("data-target") != "cop") value.hidden = true;
+		}
+		$(".js-calc-city option")[0].selected = true;
+		$(".js-calc-push").click(function(e){
+			e.preventDefault();
+			calc_auto();
+		});
+		$('.js-calc-car').change(function(){
+			$('.js-calc-car-image').attr('src',$('option:selected',this).data('img'));
+		});
+		$(".js-calc-city, .js-calc-avtopmr").change(function(e){
+			calc_auto();
+		});
+		$(".js-car-auction").change(function(e){
+			let obj = $(".js-calc-city option");
+			switch (e.target.value) {
+				case "copart":
+					for (let value of obj) {
+						if (value.getAttribute("data-target") != "cop") value.hidden = true
+						else value.hidden = false;
+					}
+					break;
+				case "iaai":
+					for (let value of obj) {
+						if (value.getAttribute("data-target") != "iaa") value.hidden = true
+						else value.hidden = false;
+					}
+					break;
+				case "heim":
+					for (let value of obj) {
+						if (value.getAttribute("data-target") != "man") value.hidden = true
+						else value.hidden = false;
+					}
+					break;
+			}
+			for (let value of obj) {
+				if (!value.hidden) {
+					value.selected = true;
+					break;
+				}
+			}
+			calc_auto();
+		});
+		$('.js-car-fuel').change(function(){
+			$('.data-toggle-calc').hide();
+			if($(this).data('toggle-calc')) $($(this).data('toggle-calc')).show()
+		});
+
+		
+
+		function calc_auto () {
+			var auto_price = Number($(".js-car-price").val()),
+				auto_engine = Number($(".js-car-volume").val()),
+				auto_battery = Number($(".js-car-battery").val()),
+				auto_type = Number($('.js-calc-car option:selected').data('id')),
+				auto_engine_type = $(".js-car-fuel:checked").val(),
+				auto_age = Number($('.js-car-age').val()),
+				region = "ua",//$('body').data('region'),
+				euro_course = parseFloat($(".js-car-course").val()),
+				grn_course = 	parseFloat($(".js-car-course-grn").val()),
+				lei_course = parseFloat($(".js-car-course-lei").val()),
+				rastamoj = 0,
+				insur = auto_price * 0.02,
+				park = 50,
+				expedir = 750,
+				avtopmr = 400,//Number($('.js-calc-avtopmr').val()),
+				acciz, poshlina, nds, rastamoj_add, acciz_single, total_price, comission, pension, pension_single,
+				ship1, ship2, ship_days, ship_port;
+			
+			//ship1 = parseInt($(".js-calc-city").val()) * ((auto_type == 3) ? .8 : 1);
+			//ship2 = parseInt($(".js-calc-city option:selected").attr("data-sea")) * ((auto_type == 3) ? .5 : 1);
+			//ship_days = $(".js-calc-city option:selected").attr("data-days");
+			//ship_port = $(".js-calc-city option:selected").attr("data-port");
+			ship1 = parseInt($(".js-calc-city").val()) * ((auto_type == 3) ? .8 : 1);
+			ship2 = parseInt($(".js-calc-city option:selected")[0].attributes[1].nodeValue) * ((auto_type == 3) ? .5 : 1);
+			ship_days = +$(".js-calc-city option:selected")[0].attributes[2].nodeValue;
+			ship_port = $(".js-calc-city option:selected")[0].attributes[0].nodeValue;
+
+			function calc_acziz_bens(price, capacity, koef){
+				var tarif, akciz;
+
+				tarif = (capacity <= acciz_limits[auto_type]['limit_bens']) ? acciz_limits[auto_type]['limit_bens_price'][0]: acciz_limits[auto_type]['limit_bens_price'][1];
+
+				akciz =  tarif * capacity * ((auto_type == 3) ? 1 : auto_age);
+				return Math.round(akciz * koef);
+			}
+			function calc_acziz_dizel(price, capacity, koef){	
+				var tarif, akciz;
+
+				tarif = (capacity <= acciz_limits[auto_type]['limit_dizel']) ? acciz_limits[auto_type]['limit_dizel_price'][0]: acciz_limits[auto_type]['limit_dizel_price'][1];
+
+				akciz =  tarif * capacity * ((auto_type == 3) ? 1 : auto_age);
+				return Math.round(akciz * koef);
+			}
+
+			
+			var fares = $(".js-car-auction option:selected").data("fares").split("|");
+
+			fares.forEach(function(element) {
+				var fares1 = element.split(":");
+				var fares_from = +fares1[0];
+				var fares_to = +fares1[1];
 				
-			<!--[if lte IE 8]>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-			<![endif]-->
-			<!--[if gt IE 8]><!-->
-			<script src="./tilda2_files/jquery.min.js"></script>
-			<!--<![endif]-->
-			<script src="./tilda2_files/calc.js"></script>
-		</header>
-	</body>
-</html>
+				if (auto_price >= fares_from && auto_price < fares_to) {
+					comission = parseInt(fares1[2]);
+
+					if (auto_price >= 15000 && $(".js-car-auction").val() != 'heim') 
+						comission = Number(auto_price)*0.04 + Number(fares1[2]);
+
+					/*if (auto_price >= 7500 && $(".js-car-auction").val() == 'iaai') {
+						comission = comission +  Number(auto_price) * ((auto_price < 20000) ? 0.01 : 0.04) + 35;
+					}*/
+				}
+				
+			});
+
+			switch(auto_engine_type){
+				case "Бензин": acciz = calc_acziz_bens(auto_price, auto_engine, euro_course); break;
+				case "Дизель": acciz = calc_acziz_dizel(auto_price, auto_engine, euro_course); break;
+				case "Электро": acciz = Math.round(auto_battery * euro_course); break;
+				case "Гибрид": acciz = Math.round(100 * euro_course); break;
+			}
+
+			console.log(comission);
+
+			poshlina = (auto_engine_type === "Электро") ? 0 : Math.round(poshlina_per * (Number(comission) + 400 + Number(auto_price)));
+			nds = (auto_engine_type === "Электро") ? 0 : Math.round((Number(auto_price) + Number(comission) + Number(poshlina) + Number(acciz) + 400) * nds_per);
+
+			if(region !== 'ua') {  // растаможка
+				if(region == 'pmr') { //pmr
+					switch(true) {
+						case(auto_age  < 2): step = 0; break;
+						case(auto_age  < 6): step = 3; break;
+						case(auto_age  < 9): step = 7; break;
+						default: step = 10;
+					}
+					rastamoj_engine = (auto_engine_type == "Дизель" || auto_engine_type == "Бензин") ? 'fuel' : 'electro';
+					rastamoj_per = rastamojka_pmr[step][rastamoj_engine][0];
+					rastamoj_kub = rastamojka_pmr[step][rastamoj_engine][1];
+					rastamoj_price = parseInt(auto_price);
+					price2 = auto_engine * 1000 * rastamoj_kub;
+					if(auto_engine_type == "Электро") {
+						rastamoj_price += parseInt(comission) + parseInt(ship1) + parseInt(ship2);
+						price2 = 0;
+					}
+					price1 = rastamoj_price * rastamoj_per / 100;
+					if(price1 > price2) {
+						rastamoj = price1 + 100;
+						rastamoj_add = rastamoj_per + '%';
+					} else {
+						rastamoj = price2 + 100;
+						rastamoj_add = rastamoj_kub + '$/см³';
+					}
+				} else {  // md
+					switch(true) {
+						case(auto_age  < 2): step = 0; break;
+						case(auto_age  < 4): step = 3; break;
+						case(auto_age  < 6): step = 5; break;
+						case(auto_age  < 7): step = 7; break;
+						case(auto_age  < 8): step = 8; break;
+						case(auto_age  < 9): step = 9; break;
+						default: step = 10;
+					}
+					rastamoj_engine = auto_engine * 1000;
+					if(auto_engine_type == "Дизель") {
+						switch(true) {
+							case(rastamoj_engine < 1501): rastamoj_kub = rastamojka_md[step]['Дизель'][0]; break;
+							case(rastamoj_engine < 2501): rastamoj_kub = rastamojka_md[step]['Дизель'][1]; break;
+																	 default: rastamoj_kub = rastamojka_md[step]['Дизель'][2]; break;
+						}
+					} else if (auto_engine_type == "Электро") {
+						rastamoj = 0;
+					}	else {
+						switch(true) {
+							case(rastamoj_engine < 1001): rastamoj_kub = rastamojka_md[step]['Бензин'][0]; break;
+							case(rastamoj_engine < 1501): rastamoj_kub = rastamojka_md[step]['Бензин'][1]; break;
+							case(rastamoj_engine < 2001): rastamoj_kub = rastamojka_md[step]['Бензин'][2]; break;
+							case(rastamoj_engine < 3001): rastamoj_kub = rastamojka_md[step]['Бензин'][3]; break;
+																	 default: rastamoj_kub = rastamojka_md[step]['Бензин'][4]; break;
+						}
+						rastamoj = rastamoj_kub * lei_course * rastamoj_engine;
+						rastamoj_add = (rastamoj_kub * lei_course).toFixed(2) + '$/см³';
+						if(auto_engine_type !== 'Бензин') rastamoj = rastamoj * 0.75;
+					}
+				}
+				acciz = 0;
+				poshlina = 0;
+				nds = 0;
+				expedir = 0;
+				avtopmr = 0;
+			} else {
+				rastamoj = acciz + poshlina + nds;
+			}
+
+			/* pension block */
+
+			if (auto_price <= (290730/grn_course)) {
+				pension_single = 0.03;
+			} else if (auto_price <= (510980/grn_course)) {
+				pension_single = 0.04;
+			} else {
+				pension_single = 0.05;
+			}
+			pension = Math.round((parseInt(auto_price) + parseInt(poshlina) + parseInt(acciz)) * pension_single);	
+			
+			
+
+			total_price = parseInt(auto_price) + parseInt(acciz) + parseInt(poshlina) + parseInt(nds) + parseInt(region == 'ua' ? 0 : rastamoj) + ship1 + ship2 + parseInt(comission) + avtopmr + expedir + insur + park;
+			
+			$(".js-result-price").text(auto_price);
+			$("input[name='car_bid']").val(auto_price);
+
+			$(".js-result-acciz").text(acciz);
+			$("input[name='car_acciz']").val(acciz);
+
+			$(".js-result-acciz_single").text(acciz_single);
+			$("input[name='car_acciz_single']").val(acciz_single);
+
+			$(".js-result-poshlina").text(poshlina);
+			$("input[name='car_poshlina']").val(poshlina);
+			$("input[name='car_poshlina_per']").val(poshlina_per*100);
+
+			$(".js-result-nds").text(nds);
+			$("input[name='car_nds']").val(nds);
+			$("input[name='car_nds_per']").val(nds_per*100);
+
+			$(".js-result-pension").text(pension);
+			$("input[name='car_pf']").val(pension);
+
+			$(".js-result-pension_single").text(parseInt(pension_single * 100));
+			$("input[name='car_pf_single']").val(parseInt(pension_single * 100));
+
+			$(".js-result-avtopmr").text(avtopmr);
+			$("input[name='car_avtopmr']").val(avtopmr);
+			$("input[name='car_avtopmr_type']").val(400/*$('.js-calc-avtopmr option:selected').text()*/);
+
+			$(".js-result-exp").text(expedir);
+			$("input[name='car_exp']").val(expedir);
+
+			$('.js-result-rastamojka-per').text(rastamoj_add);
+			$("input[name='car_rastamojka_per']").val(rastamoj_add);
+
+			$('.js-result-rastamojka').text(parseInt(rastamoj));
+			$("input[name='car_rastamojka']").val(rastamoj);
+			
+			$(".js-result-ship1").text(ship1);
+			$("input[name='car_delivery']").val(ship1);
+
+			$(".js-result-ship2").text(ship2);
+			$("input[name='car_delivery2']").val(ship2);
+
+			$(".js-result-ship_days").text(ship_days);
+			$("input[name='car_days']").val(ship_days);
+
+			$(".js-result-ship_port").text(ship_port);
+			$("input[name='car_port']").val(ship_port);
+
+			$(".js-result-insur").text(insur);
+			$("input[name='car_insur']").val(insur);
+
+			$(".js-result-park").text(park);
+			$("input[name='car_park']").val(park);
+
+			$(".js-result-comission").text(comission);
+			$("input[name='car_auction']").val(comission);
+			
+			$(".js-result-total_price").text(total_price);
+			$("input[name='car_total']").val(total_price);
+			
+			$("input[name='car_age']").val($('.js-car-age option:selected').text())
+			$("input[name='car_city']").val($('.js-calc-city option:selected').text())
+			
+			
+			
+			$(".js-calc-form .btn").show();
+		}
+		
+	});
+
+</script>
